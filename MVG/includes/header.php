@@ -89,7 +89,7 @@ require_once __DIR__ . '/../config/constants.php';
 
       <!-- 1. Encapsulated Square CT -->
       <li class="mvg-nav-item" data-has-mega="true">
-        <a href="collections.php?category=encapsulated-square-ct" class="mvg-nav-link">
+        <a href="category.php?slug=encapsulated-square-ct" class="mvg-nav-link">
           <span>Encapsulated Square CT</span>
           <span class="mvg-caret" aria-hidden="true"></span>
         </a>
@@ -100,30 +100,30 @@ require_once __DIR__ . '/../config/constants.php';
               <div class="mvg-mega-col">
                 <h3 class="mvg-mega-col-title">Busbar Apertures</h3>
                 <ul class="mvg-mega-links">
-                  <li><a href="collections.php?category=encapsulated-square-ct">30 × 10 mm Busbar CT</a></li>
-                  <li><a href="collections.php?category=encapsulated-square-ct">40 × 10 mm Busbar CT</a></li>
-                  <li><a href="collections.php?category=encapsulated-square-ct">60 × 10 mm Busbar CT</a></li>
-                  <li><a href="collections.php?category=encapsulated-square-ct">80 × 10 mm Heavy Busbar</a></li>
-                  <li><a href="collections.php?category=encapsulated-square-ct">100 × 10 mm Main Incomer</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">30 × 10 mm Busbar CT</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">40 × 10 mm Busbar CT</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">60 × 10 mm Busbar CT</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">80 × 10 mm Heavy Busbar</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">100 × 10 mm Main Incomer</a></li>
                 </ul>
               </div>
 
               <div class="mvg-mega-col">
                 <h3 class="mvg-mega-col-title">Current Ratios (A)</h3>
                 <ul class="mvg-mega-links">
-                  <li><a href="collections.php?category=encapsulated-square-ct">100/5A to 300/5A</a></li>
-                  <li><a href="collections.php?category=encapsulated-square-ct">400/5A to 600/5A</a></li>
-                  <li><a href="collections.php?category=encapsulated-square-ct">800/5A to 1250/5A</a></li>
-                  <li><a href="collections.php?category=encapsulated-square-ct">1600/5A to 2500/5A</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">100/5A to 300/5A</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">400/5A to 600/5A</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">800/5A to 1250/5A</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">1600/5A to 2500/5A</a></li>
                 </ul>
               </div>
 
               <div class="mvg-mega-col">
                 <h3 class="mvg-mega-col-title">Accuracy &amp; Burden</h3>
                 <ul class="mvg-mega-links">
-                  <li><a href="collections.php?category=encapsulated-square-ct">Class 1.0 Panel Metering</a></li>
-                  <li><a href="collections.php?category=encapsulated-square-ct">Class 0.5 Revenue Grade</a></li>
-                  <li><a href="collections.php?category=encapsulated-square-ct">5 VA to 15 VA Rated Burden</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">Class 1.0 Panel Metering</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">Class 0.5 Revenue Grade</a></li>
+                  <li><a href="category.php?slug=encapsulated-square-ct">5 VA to 15 VA Rated Burden</a></li>
                 </ul>
               </div>
 
@@ -147,7 +147,7 @@ require_once __DIR__ . '/../config/constants.php';
                       <span class="mvg-featured-title">Square Busbar CT Lineup</span>
                     </div>
                   </div>
-                  <a href="collections.php?category=encapsulated-square-ct" class="mvg-featured-link">
+                  <a href="category.php?slug=encapsulated-square-ct" class="mvg-featured-link">
                     <span>View Collection</span>
                     <span aria-hidden="true">›</span>
                   </a>
@@ -157,7 +157,7 @@ require_once __DIR__ . '/../config/constants.php';
             </div>
 
             <div class="mvg-mega-footer">
-              <a href="collections.php?category=encapsulated-square-ct" class="mvg-view-all-link">
+              <a href="category.php?slug=encapsulated-square-ct" class="mvg-view-all-link">
                 <span>VIEW ALL ENCAPSULATED SQUARE CTS</span>
                 <span aria-hidden="true">›</span>
               </a>
@@ -168,7 +168,7 @@ require_once __DIR__ . '/../config/constants.php';
 
       <!-- 2. Encapsulated Ring CT -->
       <li class="mvg-nav-item" data-has-mega="true">
-        <a href="collections.php?category=encapsulated-ring-ct" class="mvg-nav-link">
+        <a href="category.php?slug=encapsulated-ring-ct" class="mvg-nav-link">
           <span>Encapsulated Ring CT</span>
           <span class="mvg-caret" aria-hidden="true"></span>
         </a>
@@ -179,21 +179,21 @@ require_once __DIR__ . '/../config/constants.php';
               <div class="mvg-mega-col">
                 <h3 class="mvg-mega-col-title">Internal Diameters</h3>
                 <ul class="mvg-mega-links">
-                  <li><a href="collections.php?category=encapsulated-ring-ct">35 mm Cable Hole CT</a></li>
-                  <li><a href="collections.php?category=encapsulated-ring-ct">45 mm Cable Opening CT</a></li>
-                  <li><a href="collections.php?category=encapsulated-ring-ct">65 mm Conductor Opening CT</a></li>
-                  <li><a href="collections.php?category=encapsulated-ring-ct">85 mm High Amp Opening CT</a></li>
-                  <li><a href="collections.php?category=encapsulated-ring-ct">115 mm Feeder Ring CT</a></li>
+                  <li><a href="category.php?slug=encapsulated-ring-ct">35 mm Cable Hole CT</a></li>
+                  <li><a href="category.php?slug=encapsulated-ring-ct">45 mm Cable Opening CT</a></li>
+                  <li><a href="category.php?slug=encapsulated-ring-ct">65 mm Conductor Opening CT</a></li>
+                  <li><a href="category.php?slug=encapsulated-ring-ct">85 mm High Amp Opening CT</a></li>
+                  <li><a href="category.php?slug=encapsulated-ring-ct">115 mm Feeder Ring CT</a></li>
                 </ul>
               </div>
 
               <div class="mvg-mega-col">
                 <h3 class="mvg-mega-col-title">Primary Currents (A)</h3>
                 <ul class="mvg-mega-links">
-                  <li><a href="collections.php?category=encapsulated-ring-ct">50A, 100A, 150A, 200A</a></li>
-                  <li><a href="collections.php?category=encapsulated-ring-ct">250A, 300A, 400A, 500A</a></li>
-                  <li><a href="collections.php?category=encapsulated-ring-ct">600A, 800A, 1000A</a></li>
-                  <li><a href="collections.php?category=encapsulated-ring-ct">1200A, 1600A, 2000A, 2500A</a></li>
+                  <li><a href="category.php?slug=encapsulated-ring-ct">50A, 100A, 150A, 200A</a></li>
+                  <li><a href="category.php?slug=encapsulated-ring-ct">250A, 300A, 400A, 500A</a></li>
+                  <li><a href="category.php?slug=encapsulated-ring-ct">600A, 800A, 1000A</a></li>
+                  <li><a href="category.php?slug=encapsulated-ring-ct">1200A, 1600A, 2000A, 2500A</a></li>
                 </ul>
               </div>
 
@@ -227,7 +227,7 @@ require_once __DIR__ . '/../config/constants.php';
                       <span class="mvg-featured-title">2500/5A to 50/5A Ring CTs</span>
                     </div>
                   </div>
-                  <a href="collections.php?category=encapsulated-ring-ct" class="mvg-featured-link">
+                  <a href="category.php?slug=encapsulated-ring-ct" class="mvg-featured-link">
                     <span>View Collection</span>
                     <span aria-hidden="true">›</span>
                   </a>
@@ -237,7 +237,7 @@ require_once __DIR__ . '/../config/constants.php';
             </div>
 
             <div class="mvg-mega-footer">
-              <a href="collections.php?category=encapsulated-ring-ct" class="mvg-view-all-link">
+              <a href="category.php?slug=encapsulated-ring-ct" class="mvg-view-all-link">
                 <span>VIEW ALL ENCAPSULATED RING CTS</span>
                 <span aria-hidden="true">›</span>
               </a>
@@ -248,28 +248,28 @@ require_once __DIR__ . '/../config/constants.php';
 
       <!-- 3. Tape Wound Ring CT -->
       <li class="mvg-nav-item">
-        <a href="collections.php?category=tape-wound-ring-ct" class="mvg-nav-link">
+        <a href="category.php?slug=tape-wound-ring-ct" class="mvg-nav-link">
           <span>Tape Wound Ring CT</span>
         </a>
       </li>
 
       <!-- 4. Resin Cast Rectangular CT -->
       <li class="mvg-nav-item">
-        <a href="collections.php?category=resin-cast-rectangular-ct" class="mvg-nav-link">
+        <a href="category.php?slug=resin-cast-rectangular-ct" class="mvg-nav-link">
           <span>Resin Cast Rectangular CT</span>
         </a>
       </li>
 
       <!-- 5. Resin Cast Ring CT -->
       <li class="mvg-nav-item">
-        <a href="collections.php?category=resin-cast-ring-ct" class="mvg-nav-link">
+        <a href="category.php?slug=resin-cast-ring-ct" class="mvg-nav-link">
           <span>Resin Cast Ring CT</span>
         </a>
       </li>
 
       <!-- 6. Split Core CT -->
       <li class="mvg-nav-item">
-        <a href="collections.php?category=split-core-ct" class="mvg-nav-link">
+        <a href="category.php?slug=split-core-ct" class="mvg-nav-link">
           <span>Split Core CT</span>
         </a>
       </li>
@@ -288,32 +288,32 @@ require_once __DIR__ . '/../config/constants.php';
   <div class="mvg-drawer-content">
     <div class="mvg-accordion-list">
       <div class="mvg-accordion-item">
-        <a href="collections.php?category=encapsulated-square-ct" class="mvg-accordion-trigger">
+        <a href="category.php?slug=encapsulated-square-ct" class="mvg-accordion-trigger">
           <span>Encapsulated Square CT</span>
         </a>
       </div>
       <div class="mvg-accordion-item">
-        <a href="collections.php?category=encapsulated-ring-ct" class="mvg-accordion-trigger">
+        <a href="category.php?slug=encapsulated-ring-ct" class="mvg-accordion-trigger">
           <span>Encapsulated Ring CT</span>
         </a>
       </div>
       <div class="mvg-accordion-item">
-        <a href="collections.php?category=tape-wound-ring-ct" class="mvg-accordion-trigger">
+        <a href="category.php?slug=tape-wound-ring-ct" class="mvg-accordion-trigger">
           <span>Tape Wound Ring CT</span>
         </a>
       </div>
       <div class="mvg-accordion-item">
-        <a href="collections.php?category=resin-cast-rectangular-ct" class="mvg-accordion-trigger">
+        <a href="category.php?slug=resin-cast-rectangular-ct" class="mvg-accordion-trigger">
           <span>Resin Cast Rectangular CT</span>
         </a>
       </div>
       <div class="mvg-accordion-item">
-        <a href="collections.php?category=resin-cast-ring-ct" class="mvg-accordion-trigger">
+        <a href="category.php?slug=resin-cast-ring-ct" class="mvg-accordion-trigger">
           <span>Resin Cast Ring CT</span>
         </a>
       </div>
       <div class="mvg-accordion-item">
-        <a href="collections.php?category=split-core-ct" class="mvg-accordion-trigger">
+        <a href="category.php?slug=split-core-ct" class="mvg-accordion-trigger">
           <span>Split Core CT</span>
         </a>
       </div>

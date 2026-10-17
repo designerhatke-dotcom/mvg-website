@@ -89,6 +89,30 @@
   },
   {
     "id": 4,
+    "name": "Resin Cast Rectangular CT",
+    "slug": "resin-cast-rectangular-ct",
+    "parent": 0,
+    "description": "High insulation epoxy resin cast current transformers for high-fault LT panels and harsh environmental installations.",
+    "image": "assets/categories/resin-cast-rectangular-ct.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Resin Cast Ring CT",
+    "slug": "resin-cast-ring-ct",
+    "parent": 0,
+    "description": "Moisture and chemical resistant cast resin round CTs with superior dielectric withstand up to 3.3kV.",
+    "image": "assets/categories/resin-cast-ring-ct.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Split Core CT",
+    "slug": "split-core-ct",
+    "parent": 0,
+    "description": "Hinged split-core current transformers designed for non-intrusive retrofit installation without disconnecting busbars.",
+    "image": "assets/categories/split-core-ct.jpg"
+  },
+  {
+    "id": 7,
     "name": "Custom Ratio CT",
     "slug": "custom-ratio-ct",
     "parent": 0,

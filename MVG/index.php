@@ -57,7 +57,7 @@ $pageTitle = SITE_NAME . " | Current Transformers & Digital Meters";
       <div class="mvg-categories-grid">
 
         <!-- Card 1: Encapsulated Square CT -->
-        <a href="collections.php?category=encapsulated-square-ct" class="mvg-cat-card" title="Browse Encapsulated Square Current Transformers">
+        <a href="category.php?slug=encapsulated-square-ct" class="mvg-cat-card" title="Browse Encapsulated Square Current Transformers">
           <div class="mvg-cat-media">
             <img 
               src="assets/categories/encapsulated-square-ct.jpg" 
@@ -77,7 +77,7 @@ $pageTitle = SITE_NAME . " | Current Transformers & Digital Meters";
         </a>
 
         <!-- Card 2: Encapsulated Ring CT -->
-        <a href="collections.php?category=encapsulated-ring-ct" class="mvg-cat-card" title="Browse Encapsulated Ring Current Transformers">
+        <a href="category.php?slug=encapsulated-ring-ct" class="mvg-cat-card" title="Browse Encapsulated Ring Current Transformers">
           <div class="mvg-cat-media">
             <img 
               src="assets/categories/encapsulated-ring-ct.jpg" 
@@ -97,7 +97,7 @@ $pageTitle = SITE_NAME . " | Current Transformers & Digital Meters";
         </a>
 
         <!-- Card 3: Tape Wound Ring CT -->
-        <a href="collections.php?category=tape-wound-ring-ct" class="mvg-cat-card" title="Browse Tape Wound Ring Current Transformers">
+        <a href="category.php?slug=tape-wound-ring-ct" class="mvg-cat-card" title="Browse Tape Wound Ring Current Transformers">
           <div class="mvg-cat-media">
             <img 
               src="assets/categories/tape-wound-ring-ct.jpg" 
@@ -117,7 +117,7 @@ $pageTitle = SITE_NAME . " | Current Transformers & Digital Meters";
         </a>
 
         <!-- Card 4: Resin Cast Rectangular CT -->
-        <a href="collections.php?category=resin-cast-rectangular-ct" class="mvg-cat-card" title="Browse Resin Cast Rectangular Current Transformers">
+        <a href="category.php?slug=resin-cast-rectangular-ct" class="mvg-cat-card" title="Browse Resin Cast Rectangular Current Transformers">
           <div class="mvg-cat-media">
             <img 
               src="assets/categories/resin-cast-rectangular-ct.jpg" 
@@ -137,7 +137,7 @@ $pageTitle = SITE_NAME . " | Current Transformers & Digital Meters";
         </a>
 
         <!-- Card 5: Resin Cast Ring CT -->
-        <a href="collections.php?category=resin-cast-ring-ct" class="mvg-cat-card" title="Browse Resin Cast Ring Current Transformers">
+        <a href="category.php?slug=resin-cast-ring-ct" class="mvg-cat-card" title="Browse Resin Cast Ring Current Transformers">
           <div class="mvg-cat-media">
             <img 
               src="assets/categories/resin-cast-ring-ct.jpg" 
@@ -157,7 +157,7 @@ $pageTitle = SITE_NAME . " | Current Transformers & Digital Meters";
         </a>
 
         <!-- Card 6: Split Core CT -->
-        <a href="collections.php?category=split-core-ct" class="mvg-cat-card" title="Browse Split Core Current Transformers">
+        <a href="category.php?slug=split-core-ct" class="mvg-cat-card" title="Browse Split Core Current Transformers">
           <div class="mvg-cat-media">
             <img 
               src="assets/categories/split-core-ct.jpg" 
@@ -176,6 +176,14 @@ $pageTitle = SITE_NAME . " | Current Transformers & Digital Meters";
           </div>
         </a>
 
+      </div>
+
+      <!-- View All Collections Hub Button -->
+      <div style="text-align: center; margin-top: 36px;">
+        <a href="collections.php" class="btn btn-outline" style="padding: 12px 28px; font-weight: 700; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px;">
+          <span>Explore All Collections Hub</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
 
     </div>

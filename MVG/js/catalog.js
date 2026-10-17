@@ -709,9 +709,9 @@
       }
     });
 
-    // URL parameter parsing (e.g. ?collection=encapsulated-square-ct or ?category=encapsulated-square-ct)
+    // URL parameter parsing (e.g. ?slug=encapsulated-square-ct, ?collection=..., ?category=...)
     const urlParams = new URLSearchParams(window.location.search);
-    const catParam = urlParams.get('collection') || urlParams.get('category');
+    const catParam = urlParams.get('slug') || urlParams.get('collection') || urlParams.get('category');
     if (catParam) {
       setCategory(catParam);
     } else {

@@ -93,12 +93,12 @@ require_once __DIR__ . '/../config/constants.php';
         <div class="mvg-footer-col">
           <h4 class="mvg-footer-title">Transformer Collections</h4>
           <ul class="mvg-footer-links">
-            <li><a href="collections.php?category=encapsulated-square-ct">Encapsulated Square CT</a></li>
-            <li><a href="collections.php?category=encapsulated-ring-ct">Encapsulated Ring CT</a></li>
-            <li><a href="collections.php?category=tape-wound-ring-ct">Tape Wound Ring CT</a></li>
-            <li><a href="collections.php?category=resin-cast-rectangular-ct">Resin Cast Rectangular CT</a></li>
-            <li><a href="collections.php?category=resin-cast-ring-ct">Resin Cast Ring CT</a></li>
-            <li><a href="collections.php?category=split-core-ct">Split Core CT</a></li>
+            <li><a href="category.php?slug=encapsulated-square-ct">Encapsulated Square CT</a></li>
+            <li><a href="category.php?slug=encapsulated-ring-ct">Encapsulated Ring CT</a></li>
+            <li><a href="category.php?slug=tape-wound-ring-ct">Tape Wound Ring CT</a></li>
+            <li><a href="category.php?slug=resin-cast-rectangular-ct">Resin Cast Rectangular CT</a></li>
+            <li><a href="category.php?slug=resin-cast-ring-ct">Resin Cast Ring CT</a></li>
+            <li><a href="category.php?slug=split-core-ct">Split Core CT</a></li>
           </ul>
         </div>
 

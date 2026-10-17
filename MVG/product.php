@@ -76,7 +76,9 @@ $waUrl = "https://wa.me/" . WHATSAPP_NUMBER . "?text=" . rawurlencode($waMsg);
       <nav class="breadcrumb-trail-clean" aria-label="Breadcrumb">
         <a href="index.php">Home</a>
         <span class="sep">›</span>
-        <a href="collections.php?category=<?php echo urlencode($product['category']); ?>"><?php echo htmlspecialchars($product['categoryName']); ?></a>
+        <a href="collections.php">Collections</a>
+        <span class="sep">›</span>
+        <a href="category.php?slug=<?php echo urlencode($product['category']); ?>"><?php echo htmlspecialchars($product['categoryName']); ?></a>
         <span class="sep">›</span>
         <span class="current"><?php echo htmlspecialchars($product['name']); ?></span>
       </nav>
@@ -159,7 +161,7 @@ $waUrl = "https://wa.me/" . WHATSAPP_NUMBER . "?text=" . rawurlencode($waMsg);
             
             <!-- Badges Row: Category, Compliance & Testing -->
             <div class="pdp-badges-row-v2">
-              <a href="collections.php?category=<?php echo urlencode($product['category']); ?>" class="badge-category-v2">
+              <a href="category.php?slug=<?php echo urlencode($product['category']); ?>" class="badge-category-v2">
                 <?php echo htmlspecialchars($product['categoryName']); ?>
               </a>
               <span class="pdp-badge-is">IS 2705 &amp; IEC 61869-2</span>
@@ -574,7 +576,7 @@ $waUrl = "https://wa.me/" . WHATSAPP_NUMBER . "?text=" . rawurlencode($waMsg);
               <h2 class="pdp-related-title">More in this Collection</h2>
               <span class="pdp-related-sub">Frequently paired current transformers in <?php echo htmlspecialchars($product['categoryName']); ?></span>
             </div>
-            <a href="collections.php?category=<?php echo urlencode($product['category']); ?>" class="pdp-view-collection-link">
+            <a href="category.php?slug=<?php echo urlencode($product['category']); ?>" class="pdp-view-collection-link">
               <span>View All <?php echo htmlspecialchars($product['categoryName']); ?></span>
               <span aria-hidden="true">&rarr;</span>
             </a>
