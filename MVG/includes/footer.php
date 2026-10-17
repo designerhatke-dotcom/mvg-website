@@ -106,12 +106,12 @@ require_once __DIR__ . '/../config/constants.php';
         <div class="mvg-footer-col">
           <h4 class="mvg-footer-title">B2B &amp; Engineering</h4>
           <ul class="mvg-footer-links">
-            <li><a href="javascript:void(0)" onclick="if(window.MVGHub){window.MVGHub.openCartDrawer();}">B2B Order Pad &amp; Cart</a></li>
-            <li><a href="collections.php">Custom Primary Currents (30A–4000A)</a></li>
-            <li><a href="collections.php">Class 1.0 &amp; Class 0.5 Metering</a></li>
-            <li><a href="collections.php">IS 2705 &amp; IEC 61869-2 Standards</a></li>
-            <li><a href="collections.php">Workshop Wholesale Minimums</a></li>
-            <li><a href="collections.php">GST Invoicing &amp; Input Tax Credit</a></li>
+            <li><a href="inquiry-cart.php">B2B Quotation Basket &amp; RFQ</a></li>
+            <li><a href="custom-ct.php">Custom CT Engineering (30A–4000A)</a></li>
+            <li><a href="datasheets.php">Technical Datasheets &amp; CAD</a></li>
+            <li><a href="track-inquiry.php">Track RFQ Status</a></li>
+            <li><a href="about.php">About Factory &amp; Lab</a></li>
+            <li><a href="faq.php">B2B Procurement FAQs</a></li>
           </ul>
         </div>
 
@@ -160,7 +160,11 @@ require_once __DIR__ . '/../config/constants.php';
   <div class="mvg-footer-bottom">
     <div class="mvg-header-container">
       <div>
-        <span>&copy; <?php echo date('Y'); ?> <strong><?php echo htmlspecialchars(SITE_NAME); ?></strong>. All rights reserved. <?php echo htmlspecialchars(SITE_TAGLINE); ?>.</span>
+        <span>&copy; <?php echo date('Y'); ?> <strong><?php echo htmlspecialchars(SITE_NAME); ?></strong>. All rights reserved.</span>
+        <span style="margin: 0 8px; color: rgba(255,255,255,0.3);">|</span>
+        <a href="privacy-policy.php" style="color: #94A3B8; text-decoration: none; font-size: 13px;">Privacy Policy</a>
+        <span style="margin: 0 8px; color: rgba(255,255,255,0.3);">|</span>
+        <a href="terms-conditions.php" style="color: #94A3B8; text-decoration: none; font-size: 13px;">Terms of Supply</a>
       </div>
       <div class="mvg-footer-badges">
         <span class="mvg-footer-pill-tag">🇮🇳 Made in India</span>

@@ -493,7 +493,60 @@ if ($isSubCategory) {
 
       <!-- Product Cards Grid -->
       <div class="product-cards-grid" id="productGrid" aria-live="polite">
-        <!-- Rendered dynamically by js/catalog.js using MVG_PRODUCTS -->
+        <?php 
+          $initialProducts = Database::getProducts($selectedCategory === 'all' ? null : $selectedCategory);
+          foreach ($initialProducts as $p):
+            $pId = $p['id'];
+            $pName = htmlspecialchars($p['name']);
+            $pImg = htmlspecialchars($p['image']);
+            $pCatName = htmlspecialchars($p['categoryName']);
+            $pPrice = floatval($p['price']);
+            $pMinQty = intval($p['minQty'] ?? 10);
+        ?>
+          <article class="product-card" data-product-id="<?php echo $pId; ?>">
+            <div class="product-thumb-wrap" onclick="window.location.href='product.php?id=<?php echo $pId; ?>'" title="Click to view full specifications">
+              <img src="<?php echo $pImg; ?>" alt="<?php echo $pName; ?>" loading="lazy" />
+              <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(<?php echo $pId; ?>);}">Quick Specs</button>
+            </div>
+            <div class="card-meta-row">
+              <span class="card-category-tag"><?php echo $pCatName; ?></span>
+              <span class="card-sku-tag">Class 1.0</span>
+            </div>
+            <h3 class="card-title" title="<?php echo $pName; ?>">
+              <a href="product.php?id=<?php echo $pId; ?>" style="color: inherit; text-decoration: none;"><?php echo $pName; ?></a>
+            </h3>
+            <div class="card-price-container">
+              <div class="price-main-row">
+                <span class="price-retail-label">Price:</span>
+                <span class="price-number">₹<?php echo number_format($pPrice, 0); ?></span>
+              </div>
+              <div class="card-wholesale-tier-row">
+                <span class="tier-label-sm">Min. Qty:</span>
+                <span class="tier-price-sm"><?php echo $pMinQty; ?> Pcs</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="qty-stepper">
+                <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(<?php echo $pId; ?>, -1);}" aria-label="Decrease quantity by 1">−</button>
+                <input 
+                  type="number" 
+                  class="qty-input" 
+                  id="qty-input-<?php echo $pId; ?>" 
+                  value="<?php echo $pMinQty; ?>" 
+                  min="<?php echo $pMinQty; ?>" 
+                  step="1"
+                  aria-label="Quantity for <?php echo $pName; ?>"
+                  oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(<?php echo $pId; ?>, this);}"
+                  onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(<?php echo $pId; ?>, this);}"
+                />
+                <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(<?php echo $pId; ?>, 1);}" aria-label="Increase quantity by 1">+</button>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(<?php echo $pId; ?>);}">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+        <?php endforeach; ?>
       </div>
 
       <!-- B2B Wholesale Assurance Strip (Identical to Collections Page) -->

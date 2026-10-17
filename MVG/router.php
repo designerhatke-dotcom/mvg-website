@@ -60,6 +60,39 @@ if (in_array($slug, $hubAliases)) {
     exit;
 }
 
+// 2b. Static B2B E-Commerce & Information Pages
+$staticPages = [
+    'about'            => 'about.php',
+    'about-us'         => 'about.php',
+    'contact'          => 'contact.php',
+    'contact-us'       => 'contact.php',
+    'custom-ct'        => 'custom-ct.php',
+    'custom-rfq'       => 'custom-ct.php',
+    'engineering'      => 'custom-ct.php',
+    'datasheets'       => 'datasheets.php',
+    'downloads'        => 'datasheets.php',
+    'faq'              => 'faq.php',
+    'faqs'             => 'faq.php',
+    'inquiry-cart'     => 'inquiry-cart.php',
+    'rfq-cart'         => 'inquiry-cart.php',
+    'rfq'              => 'inquiry-cart.php',
+    'cart'             => 'inquiry-cart.php',
+    'inquiry-success'  => 'inquiry-success.php',
+    'thank-you'        => 'inquiry-success.php',
+    'track'            => 'track-inquiry.php',
+    'track-inquiry'    => 'track-inquiry.php',
+    'search'           => 'search.php',
+    'privacy-policy'   => 'privacy-policy.php',
+    'privacy'          => 'privacy-policy.php',
+    'terms-conditions' => 'terms-conditions.php',
+    'terms'            => 'terms-conditions.php',
+];
+
+if (isset($staticPages[$slug])) {
+    include __DIR__ . '/' . $staticPages[$slug];
+    exit;
+}
+
 // 3. Check Categories & Subcategories
 // Fetch categories
 $allCategories = Database::getCategories();

@@ -52,6 +52,9 @@
     </div>
 
     <div class="drawer-actions">
+      <a href="inquiry-cart.php" class="btn btn-primary w-full" style="padding: 12px; font-weight: 800; border-radius: 8px; text-decoration: none; text-align: center; display: block; margin-bottom: 8px;">
+        Review &amp; Submit Quotation (RFQ) &rarr;
+      </a>
       <button type="button" class="btn btn-whatsapp w-full" id="whatsAppOrderBtn">
         <span>💬 Send Order Inquiry on WhatsApp</span>
       </button>
