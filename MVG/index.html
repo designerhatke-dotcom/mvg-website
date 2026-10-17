@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MVG Power Solutions | Current Transformers &amp; Digital Meters</title>
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <!-- =====================================================================
+       SITE HEADER
+       ===================================================================== -->
+  <header class="mvg-site-header">
+    
+    <!-- 1. Top Announcement Bar -->
+    <div class="mvg-top-bar">
+      <div class="mvg-header-container">
+        
+        <!-- Left: Warehouse & Dispatch Status -->
+        <div class="mvg-top-left">
+          <span class="mvg-pulse-dot" aria-hidden="true"></span>
+          <span>DELHI NCR WAREHOUSE HUB • SAME-DAY DISPATCH</span>
+        </div>
+
+        <!-- Center: B2B GST & Tiered Wholesale Benefit -->
+        <div class="mvg-top-center">
+          <span>GST Input Tax Credit on All B2B Invoices • <strong>Tiered Wholesale Rates for 10+ / 50+ / 100+ Pcs</strong></span>
+        </div>
+
+        <!-- Right: Contact & WhatsApp Support Phone -->
+        <div class="mvg-top-right">
+          <a href="tel:+917836004040" class="mvg-top-phone" title="Call or WhatsApp MVG Support">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>+91 78360 04040</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. Main Header Row (Logo, Search, Action Controls) -->
+    <div class="mvg-main-header">
+      <div class="mvg-header-container">
+        
+        <!-- Mobile Drawer Toggle Hamburger -->
+        <button id="mvgMobileToggle" class="mvg-mobile-toggle" type="button" aria-label="Open mobile navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="/" class="mvg-brand" title="MVG Power Solutions">
+          <img src="assets/Logo-11.png" alt="MVG Power Solutions" width="180" height="48">
+        </a>
+
+        <!-- Universal Search Input Bar -->
+        <div class="mvg-search-wrapper">
+          <form class="mvg-search-box" role="search" onsubmit="event.preventDefault();">
+            <svg class="mvg-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              id="mvgSearchInput" 
+              type="search" 
+              placeholder="Search by Part Name, Ratio (e.g. 100/5A), Busbar, Resin Cast CT..." 
+              autocomplete="off"
+              aria-label="Search current transformers and meters"
+            >
+            <kbd class="mvg-search-key" title="Press '/' to quickly search">/</kbd>
+          </form>
+        </div>
+
+        <!-- Header Actions: Cart Counter -->
+        <div class="mvg-header-actions">
+
+          <!-- Cart Button with Live Counter Badge -->
+          <button id="mvgCartBtn" class="mvg-btn-cart" type="button" aria-label="View Shopping Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span>Cart</span>
+            <span class="mvg-cart-badge">0</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. Navigation Bar & Multi-Category Mega Menu -->
+    <nav class="mvg-nav-bar" aria-label="Main Product Categories">
+      <div class="mvg-header-container">
+        <ul class="mvg-nav-list">
+
+          <!-- 1. Encapsulated Square CT -->
+          <li class="mvg-nav-item" data-has-mega="true">
+            <a href="collections.html?category=encapsulated-square-ct" class="mvg-nav-link">
+              <span>Encapsulated Square CT</span>
+              <span class="mvg-caret" aria-hidden="true"></span>
+            </a>
+            <div class="mvg-mega-menu" role="region" aria-label="Encapsulated Square CT Overview">
+              <div class="mvg-mega-inner">
+                <div class="mvg-mega-grid">
+                  
+                  <!-- Col 1: Busbar Window Apertures -->
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Busbar Apertures</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#sq-30x10">30 × 10 mm Busbar CT</a></li>
+                      <li><a href="#sq-40x10">40 × 10 mm Busbar CT</a></li>
+                      <li><a href="#sq-60x10">60 × 10 mm Busbar CT</a></li>
+                      <li><a href="#sq-80x10">80 × 10 mm Heavy Busbar</a></li>
+                      <li><a href="#sq-100x10">100 × 10 mm Main Incomer</a></li>
+                      <li><a href="#sq-custom">Dual Busbar Configurations</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Col 2: Standard Ratios -->
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Current Ratios (A)</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#sq-ratio-100">100/5A to 300/5A</a></li>
+                      <li><a href="#sq-ratio-400">400/5A to 600/5A</a></li>
+                      <li><a href="#sq-ratio-800">800/5A to 1250/5A</a></li>
+                      <li><a href="#sq-ratio-1600">1600/5A to 2500/5A</a></li>
+                      <li><a href="#sq-ratio-3200">3200/5A to 4000/5A</a></li>
+                      <li><a href="#sq-ratio-1a">Custom 1A Secondary Output</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Col 3: Accuracy & Burden -->
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Accuracy &amp; Burden</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#sq-class-1">Class 1.0 Panel Metering</a></li>
+                      <li><a href="#sq-class-05">Class 0.5 Revenue Grade</a></li>
+                      <li><a href="#sq-class-02s">Class 0.2S Precision CT</a></li>
+                      <li><a href="#sq-burden-5va">5 VA Rated Burden</a></li>
+                      <li><a href="#sq-burden-10va">10 VA to 15 VA Burden</a></li>
+                      <li><a href="#sq-calibration">NABL Calibration Certificate</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Col 4: Industrial Standards -->
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Engineering Standards</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#sq-is2705">IS 2705 Part 1 &amp; 2 Standard</a></li>
+                      <li><a href="#sq-iec61869">IEC 61869-2 Compliant</a></li>
+                      <li><a href="#sq-enclosure">UL94-V0 Flame Retardant Case</a></li>
+                      <li><a href="#sq-foot-mounting">Built-in DIN Rail &amp; Foot Brackets</a></li>
+                      <li><a href="#sq-testing">100% Factory Routine Tested</a></li>
+                      <li><a href="#sq-crate">Bulk Workshop Packaging</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Col 5: Featured Product -->
+                  <div class="mvg-mega-col">
+                    <div class="mvg-featured-card">
+                      <div class="mvg-featured-top">
+                        <div class="mvg-featured-img-wrap">
+                          <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1000-A-1.jpg" alt="1000/5A Encapsulated Square CT" loading="lazy">
+                        </div>
+                        <div class="mvg-featured-info">
+                          <span class="mvg-badge-top-seller">TOP SELLER</span>
+                          <span class="mvg-featured-title">1000/5A Encapsulated Square CT 80×10mm</span>
+                        </div>
+                      </div>
+                      <a href="#product-1000-sq" class="mvg-featured-link">
+                        <span>View Specifications</span>
+                        <span aria-hidden="true">›</span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mvg-mega-footer">
+                  <a href="#all-encapsulated-square-ct" class="mvg-view-all-link">
+                    <span>VIEW ALL SQUARE CURRENT TRANSFORMERS</span>
+                    <span aria-hidden="true">›</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- 2. Encapsulated Ring CT -->
+          <li class="mvg-nav-item" data-has-mega="true">
+            <a href="collections.html?category=encapsulated-ring-ct" class="mvg-nav-link">
+              <span>Encapsulated Ring CT</span>
+              <span class="mvg-caret" aria-hidden="true"></span>
+            </a>
+            <div class="mvg-mega-menu" role="region" aria-label="Encapsulated Ring CT Overview">
+              <div class="mvg-mega-inner">
+                <div class="mvg-mega-grid">
+                  
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Internal Diameters (ID)</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#ring-id-30">30 mm Cable Hole</a></li>
+                      <li><a href="#ring-id-45">45 mm Cable Opening</a></li>
+                      <li><a href="#ring-id-65">65 mm Conductor Opening</a></li>
+                      <li><a href="#ring-id-85">85 mm High Ampere Opening</a></li>
+                      <li><a href="#ring-id-115">115 mm Large Feeder Ring</a></li>
+                      <li><a href="#ring-id-140">140 mm Heavy Incomer Ring</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Current Ratings</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#ring-ratio-100">100/5A &amp; 150/5A</a></li>
+                      <li><a href="#ring-ratio-200">200/5A to 500/5A</a></li>
+                      <li><a href="#ring-ratio-800">800/5A to 1200/5A</a></li>
+                      <li><a href="#ring-ratio-1600">1600/5A &amp; 2000/5A</a></li>
+                      <li><a href="#ring-ratio-2500">2500/5A High Capacity</a></li>
+                      <li><a href="#ring-ratio-special">Custom Primary Ratio On-Demand</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Metering &amp; Relays</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#ring-class-1">Class 1.0 General Metering</a></li>
+                      <li><a href="#ring-class-05">Class 0.5 Digital Multifunction Meter</a></li>
+                      <li><a href="#ring-burden-25">2.5 VA Low Burden Electronic</a></li>
+                      <li><a href="#ring-burden-15">15 VA Heavy Burden Analog Line</a></li>
+                      <li><a href="#ring-polarity">Clear P1/P2 Laser Marked Polarity</a></li>
+                      <li><a href="#ring-terminals">Nickel Plated Brass Terminals</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Build &amp; Protection</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#ring-epoxy">Resin Sealed Core Protection</a></li>
+                      <li><a href="#ring-insulation">High Dielectric Insulation 3kV</a></li>
+                      <li><a href="#ring-temperature">Thermal Class E / B Rating</a></li>
+                      <li><a href="#ring-vibration">High Shock &amp; Vibration Proof</a></li>
+                      <li><a href="#ring-oem">OEM White-label Crates</a></li>
+                      <li><a href="#ring-rohs">RoHS Compliant Materials</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <div class="mvg-featured-card">
+                      <div class="mvg-featured-top">
+                        <div class="mvg-featured-img-wrap">
+                          <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/2500-A.jpg" alt="2500/5A Ring Current Transformer" loading="lazy">
+                        </div>
+                        <div class="mvg-featured-info">
+                          <span class="mvg-badge-top-seller">TOP SELLER</span>
+                          <span class="mvg-featured-title">2500/5A Ring CT 115mm | Class 1.0</span>
+                        </div>
+                      </div>
+                      <a href="#product-2500-ring" class="mvg-featured-link">
+                        <span>View Specifications</span>
+                        <span aria-hidden="true">›</span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mvg-mega-footer">
+                  <a href="#all-encapsulated-ring-ct" class="mvg-view-all-link">
+                    <span>VIEW ALL ENCAPSULATED RING CURRENT TRANSFORMERS</span>
+                    <span aria-hidden="true">›</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- 3. Tape Wound Ring CT -->
+          <li class="mvg-nav-item" data-has-mega="true">
+            <a href="collections.html?category=tape-wound-ring-ct" class="mvg-nav-link">
+              <span>Tape Wound Ring CT</span>
+              <span class="mvg-caret" aria-hidden="true"></span>
+            </a>
+            <div class="mvg-mega-menu" role="region" aria-label="Tape Wound Ring CT Overview">
+              <div class="mvg-mega-inner">
+                <div class="mvg-mega-grid">
+                  
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Core Dimensions</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#tw-id-30">ID 30mm / OD 60mm</a></li>
+                      <li><a href="#tw-id-45">ID 45mm / OD 75mm</a></li>
+                      <li><a href="#tw-id-65">ID 65mm / OD 100mm</a></li>
+                      <li><a href="#tw-id-85">ID 85mm / OD 125mm</a></li>
+                      <li><a href="#tw-id-115">ID 115mm / OD 170mm</a></li>
+                      <li><a href="#tw-custom">Custom Thickness / Stack Height</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Primary Ratings</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#tw-ratio-50">50/5A to 200/5A</a></li>
+                      <li><a href="#tw-ratio-300">300/5A to 600/5A</a></li>
+                      <li><a href="#tw-ratio-800">800/5A to 1250/5A</a></li>
+                      <li><a href="#tw-ratio-1600">1600/5A to 2500/5A</a></li>
+                      <li><a href="#tw-ratio-3000">3000/5A to 4000/5A</a></li>
+                      <li><a href="#tw-ratio-5a">Secondary 5A Standard</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Taping &amp; Insulation</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#tw-cotton">Cotton Tape Wrapped CT</a></li>
+                      <li><a href="#tw-pvc">PVC Insulation Taped CT</a></li>
+                      <li><a href="#tw-varnish">Vacuum Impregnated Varnish</a></li>
+                      <li><a href="#tw-crgo">Prime Grade CRGO Toroidal Core</a></li>
+                      <li><a href="#tw-lead">Flexible Wire Lead Terminations</a></li>
+                      <li><a href="#tw-brass">Heavy Duty Brass Stud Terminals</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Wholesale &amp; Delivery</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#tw-same-day">Same-Day Dispatch Delhi NCR</a></li>
+                      <li><a href="#tw-all-india">All India Road Logistics</a></li>
+                      <li><a href="#tw-rates">Direct Factory Prices</a></li>
+                      <li><a href="#tw-b2b">GST Input Credit Invoices</a></li>
+                      <li><a href="#tw-routine">Routine Test Lab Verified</a></li>
+                      <li><a href="#tw-guarantee">Full 12-Month Guarantee</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <div class="mvg-featured-card">
+                      <div class="mvg-featured-top">
+                        <div class="mvg-featured-img-wrap">
+                          <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/2000-A.jpg" alt="Tape Wound Ring CT" loading="lazy">
+                        </div>
+                        <div class="mvg-featured-info">
+                          <span class="mvg-badge-top-seller">TOP SELLER</span>
+                          <span class="mvg-featured-title">2000/5A Tape Wound Ring CT 115mm</span>
+                        </div>
+                      </div>
+                      <a href="#product-2000-tw" class="mvg-featured-link">
+                        <span>View Specifications</span>
+                        <span aria-hidden="true">›</span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mvg-mega-footer">
+                  <a href="#all-tape-wound-ring-ct" class="mvg-view-all-link">
+                    <span>VIEW ALL TAPE WOUND CURRENT TRANSFORMERS</span>
+                    <span aria-hidden="true">›</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- 4. Resin Cast Rectangular CT -->
+          <li class="mvg-nav-item" data-has-mega="true">
+            <a href="collections.html?category=resin-cast-rectangular-ct" class="mvg-nav-link">
+              <span>Resin Cast Rectangular CT</span>
+              <span class="mvg-caret" aria-hidden="true"></span>
+            </a>
+            <div class="mvg-mega-menu" role="region" aria-label="Resin Cast Rectangular CT Overview">
+              <div class="mvg-mega-inner">
+                <div class="mvg-mega-grid">
+                  
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Aperture Sizes</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#rc-rect-40">40 × 10 mm Busbar Window</a></li>
+                      <li><a href="#rc-rect-60">60 × 10 mm Busbar Window</a></li>
+                      <li><a href="#rc-rect-80">80 × 10 mm Heavy Busbar</a></li>
+                      <li><a href="#rc-rect-100">100 × 10 mm Incomer Busbar</a></li>
+                      <li><a href="#rc-rect-120">120 × 10 mm High Current Bar</a></li>
+                      <li><a href="#rc-rect-multi">Multi-Busbar Custom Windows</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Voltage &amp; Ratio</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#rc-rect-lt">LT 660V / 1.1kV Switchgear</a></li>
+                      <li><a href="#rc-rect-400">400/5A to 800/5A</a></li>
+                      <li><a href="#rc-rect-1000">1000/5A to 1600/5A</a></li>
+                      <li><a href="#rc-rect-2000">2000/5A to 3200/5A</a></li>
+                      <li><a href="#rc-rect-4000">4000/5A Heavy Substation</a></li>
+                      <li><a href="#rc-rect-secondary">Dual Ratio 5A / 1A Secondary</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Accuracy &amp; Protection</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#rc-rect-class-02">Class 0.2 &amp; 0.2S Tariff Billing</a></li>
+                      <li><a href="#rc-rect-class-05">Class 0.5 Revenue Metering</a></li>
+                      <li><a href="#rc-rect-protection">Protection Class 5P10 / 5P20</a></li>
+                      <li><a href="#rc-rect-ps">Class PS Differential Protection</a></li>
+                      <li><a href="#rc-rect-burden">Burden 5VA, 10VA, 15VA, 30VA</a></li>
+                      <li><a href="#rc-rect-test">Impulse Voltage Tested</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Mechanical Features</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#rc-rect-epoxy">Araldite Cast Epoxy Resin</a></li>
+                      <li><a href="#rc-rect-moisture">Hermetically Sealed &amp; Tropicalized</a></li>
+                      <li><a href="#rc-rect-terminals">Polycarbonate Terminal Cover</a></li>
+                      <li><a href="#rc-rect-seal">Lead Sealable Terminal Cover</a></li>
+                      <li><a href="#rc-rect-copper">Busbar Clamping Accessories</a></li>
+                      <li><a href="#rc-rect-oem">OEM Custom Color Available</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <div class="mvg-featured-card">
+                      <div class="mvg-featured-top">
+                        <div class="mvg-featured-img-wrap">
+                          <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1600-A.jpg" alt="Resin Cast Rectangular CT" loading="lazy">
+                        </div>
+                        <div class="mvg-featured-info">
+                          <span class="mvg-badge-top-seller">TOP SELLER</span>
+                          <span class="mvg-featured-title">1600/5A Resin Cast Rectangular CT 100×10</span>
+                        </div>
+                      </div>
+                      <a href="#product-1600-rc" class="mvg-featured-link">
+                        <span>View Specifications</span>
+                        <span aria-hidden="true">›</span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mvg-mega-footer">
+                  <a href="#all-resin-cast-rectangular-ct" class="mvg-view-all-link">
+                    <span>VIEW ALL RESIN CAST RECTANGULAR CTS</span>
+                    <span aria-hidden="true">›</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- 5. Resin Cast Ring CT -->
+          <li class="mvg-nav-item" data-has-mega="true">
+            <a href="collections.html?category=resin-cast-ring-ct" class="mvg-nav-link">
+              <span>Resin Cast Ring CT</span>
+              <span class="mvg-caret" aria-hidden="true"></span>
+            </a>
+            <div class="mvg-mega-menu" role="region" aria-label="Resin Cast Ring CT Overview">
+              <div class="mvg-mega-inner">
+                <div class="mvg-mega-grid">
+                  
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Internal Diameters</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#rc-ring-35">35 mm Internal Bore</a></li>
+                      <li><a href="#rc-ring-50">50 mm Cable Incomer</a></li>
+                      <li><a href="#rc-ring-70">70 mm Power Conductor</a></li>
+                      <li><a href="#rc-ring-90">90 mm High Current Cable</a></li>
+                      <li><a href="#rc-ring-120">120 mm Feeder Core</a></li>
+                      <li><a href="#rc-ring-cbct">Earth Fault CBCT Core</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Ratios &amp; VA</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#rc-ring-100">100/5A to 400/5A</a></li>
+                      <li><a href="#rc-ring-500">500/5A to 1000/5A</a></li>
+                      <li><a href="#rc-ring-1200">1200/5A to 2000/5A</a></li>
+                      <li><a href="#rc-ring-2500">2500/5A to 3200/5A</a></li>
+                      <li><a href="#rc-ring-va-5">5 VA &amp; 10 VA High Burden</a></li>
+                      <li><a href="#rc-ring-1a">1A Secondary for Long Runs</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Class &amp; Duty</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#rc-ring-c1">Class 1.0 Energy Auditing</a></li>
+                      <li><a href="#rc-ring-c05">Class 0.5 High Precision</a></li>
+                      <li><a href="#rc-ring-prot">Class 5P10 Relay Operation</a></li>
+                      <li><a href="#rc-ring-epdm">EPDM Rubber Grommets</a></li>
+                      <li><a href="#rc-ring-base">Steel Base Mounting Plate</a></li>
+                      <li><a href="#rc-ring-temp">High Operating Temp +85°C</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Durability &amp; Safety</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#rc-ring-dielectric">High Insulation Level 3kV/1min</a></li>
+                      <li><a href="#rc-ring-epoxy">Solid Epoxy Monoblock Pour</a></li>
+                      <li><a href="#rc-ring-corrosion">Non-Corrosive Enclosure</a></li>
+                      <li><a href="#rc-ring-testing">High Voltage Tested</a></li>
+                      <li><a href="#rc-ring-dispatch">Delhi NCR Ready Stock</a></li>
+                      <li><a href="#rc-ring-crating">Export Sea-Worthy Crates</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <div class="mvg-featured-card">
+                      <div class="mvg-featured-top">
+                        <div class="mvg-featured-img-wrap">
+                          <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1200-A.jpg" alt="Resin Cast Ring CT" loading="lazy">
+                        </div>
+                        <div class="mvg-featured-info">
+                          <span class="mvg-badge-top-seller">TOP SELLER</span>
+                          <span class="mvg-featured-title">1200/5A Resin Cast Ring CT 85mm Bore</span>
+                        </div>
+                      </div>
+                      <a href="#product-1200-rcr" class="mvg-featured-link">
+                        <span>View Specifications</span>
+                        <span aria-hidden="true">›</span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mvg-mega-footer">
+                  <a href="#all-resin-cast-ring-ct" class="mvg-view-all-link">
+                    <span>VIEW ALL RESIN CAST RING CURRENT TRANSFORMERS</span>
+                    <span aria-hidden="true">›</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- 6. Split Core CT -->
+          <li class="mvg-nav-item" data-has-mega="true">
+            <a href="collections.html?category=split-core-ct" class="mvg-nav-link">
+              <span>Split Core CT</span>
+              <span class="mvg-caret" aria-hidden="true"></span>
+            </a>
+            <div class="mvg-mega-menu" role="region" aria-label="Split Core CT Overview">
+              <div class="mvg-mega-inner">
+                <div class="mvg-mega-grid">
+                  
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Retrofit Window Sizes</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#sc-win-24">24 mm Clamp-on Window</a></li>
+                      <li><a href="#sc-win-36">36 mm Retrofit Window</a></li>
+                      <li><a href="#sc-win-50">50 mm Busbar Clamp</a></li>
+                      <li><a href="#sc-win-80">80 × 50 mm Rectangular Split</a></li>
+                      <li><a href="#sc-win-120">120 × 80 mm Large Busbar</a></li>
+                      <li><a href="#sc-win-160">160 × 80 mm Substation Split</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Current Ratings</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#sc-ratio-100">100/5A &amp; 200/5A</a></li>
+                      <li><a href="#sc-ratio-400">400/5A &amp; 600/5A</a></li>
+                      <li><a href="#sc-ratio-1000">1000/5A &amp; 1500/5A</a></li>
+                      <li><a href="#sc-ratio-2000">2000/5A &amp; 3000/5A</a></li>
+                      <li><a href="#sc-ratio-4000">4000/5A Heavy Incomer</a></li>
+                      <li><a href="#sc-ratio-mv">1A / 333mV Output Options</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Retrofit Benefits</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#sc-no-shutdown">Zero Power Shutdown Installation</a></li>
+                      <li><a href="#sc-snap-lock">Heavy Duty One-Click Snap Lock</a></li>
+                      <li><a href="#sc-solar">Solar PV Inverter Auditing</a></li>
+                      <li><a href="#sc-energy">Energy Management System (EMS)</a></li>
+                      <li><a href="#sc-submeter">Tenant Sub-Metering Systems</a></li>
+                      <li><a href="#sc-leads">Pre-wired 1 Meter Lead Wires</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <h3 class="mvg-mega-col-title">Accuracy &amp; Safety</h3>
+                    <ul class="mvg-mega-links">
+                      <li><a href="#sc-class-05">Class 0.5 Revenue Grade</a></li>
+                      <li><a href="#sc-class-1">Class 1.0 Panel Monitoring</a></li>
+                      <li><a href="#sc-overvoltage">Built-in TVS Overvoltage Diode</a></li>
+                      <li><a href="#sc-silicon">High Permeability Silicon Steel</a></li>
+                      <li><a href="#sc-factory-pair">Precision Mated Core Faces</a></li>
+                      <li><a href="#sc-standards">IEC 61869-2 &amp; CE Certified</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="mvg-mega-col">
+                    <div class="mvg-featured-card">
+                      <div class="mvg-featured-top">
+                        <div class="mvg-featured-img-wrap">
+                          <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/800-A-1.jpg" alt="Split Core CT" loading="lazy">
+                        </div>
+                        <div class="mvg-featured-info">
+                          <span class="mvg-badge-top-seller">TOP SELLER</span>
+                          <span class="mvg-featured-title">800/5A Split Core CT 80×50mm Window</span>
+                        </div>
+                      </div>
+                      <a href="#product-800-sc" class="mvg-featured-link">
+                        <span>View Specifications</span>
+                        <span aria-hidden="true">›</span>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mvg-mega-footer">
+                  <a href="#all-split-core-ct" class="mvg-view-all-link">
+                    <span>VIEW ALL SPLIT CORE CURRENT TRANSFORMERS</span>
+                    <span aria-hidden="true">›</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </li>
+
+          <!-- Extra Utility Nav Item: B2B Wholesale Matrix -->
+          <li class="mvg-nav-item mvg-nav-utility">
+            <a href="#wholesale-matrix" class="mvg-nav-link">
+              <span>B2B Wholesale Matrix</span>
+            </a>
+          </li>
+
+          <!-- Extra Utility Nav Item: Workshop Specials -->
+          <li class="mvg-nav-item mvg-nav-utility">
+            <a href="#workshop-specials" class="mvg-nav-link">
+              <span>Workshop Specials</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- =====================================================================
+       MOBILE SLIDE-OVER NAVIGATION DRAWER
+       ===================================================================== -->
+  <div id="mvgDrawerOverlay" class="mvg-mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside id="mvgMobileDrawer" class="mvg-mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    
+    <div class="mvg-drawer-header">
+      <img src="assets/Logo-11.png" alt="MVG Power Solutions" width="130" height="34" style="object-fit: contain;">
+      <button id="mvgDrawerClose" class="mvg-drawer-close" type="button" aria-label="Close menu">&times;</button>
+    </div>
+
+    <div class="mvg-drawer-content">
+      
+      <!-- Mobile Search Input -->
+      <div style="margin-bottom: 16px;">
+        <form class="mvg-search-box" role="search" onsubmit="event.preventDefault();">
+          <svg class="mvg-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" placeholder="Search CTs, meters..." style="font-size: 13px;">
+        </form>
+      </div>
+
+      <!-- Category Accordion Items -->
+      <div class="mvg-accordion-list">
+        
+        <!-- Accordion 1: Encapsulated Square CT -->
+        <div class="mvg-accordion-item">
+          <button type="button" class="mvg-accordion-trigger">
+            <span>Encapsulated Square CT</span>
+            <span class="mvg-accordion-icon">▾</span>
+          </button>
+          <div class="mvg-accordion-panel">
+            <div class="mvg-accordion-links">
+              <a href="#sq-30x10">30 × 10 mm Busbar CT</a>
+              <a href="#sq-40x10">40 × 10 mm Busbar CT</a>
+              <a href="#sq-60x10">60 × 10 mm Busbar CT</a>
+              <a href="#sq-80x10">80 × 10 mm Heavy Busbar</a>
+              <a href="#sq-100x10">100 × 10 mm Main Incomer</a>
+              <a href="#all-encapsulated-square-ct" style="color: var(--mvg-brand); font-weight: 700;">View All Square CTs &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 2: Encapsulated Ring CT -->
+        <div class="mvg-accordion-item">
+          <button type="button" class="mvg-accordion-trigger">
+            <span>Encapsulated Ring CT</span>
+            <span class="mvg-accordion-icon">▾</span>
+          </button>
+          <div class="mvg-accordion-panel">
+            <div class="mvg-accordion-links">
+              <a href="#ring-id-30">30 mm Cable Hole</a>
+              <a href="#ring-id-45">45 mm Cable Opening</a>
+              <a href="#ring-id-65">65 mm Conductor Opening</a>
+              <a href="#ring-id-85">85 mm High Amp Opening</a>
+              <a href="#ring-id-115">115 mm Feeder Ring</a>
+              <a href="#all-encapsulated-ring-ct" style="color: var(--mvg-brand); font-weight: 700;">View All Ring CTs &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 3: Tape Wound Ring CT -->
+        <div class="mvg-accordion-item">
+          <button type="button" class="mvg-accordion-trigger">
+            <span>Tape Wound Ring CT</span>
+            <span class="mvg-accordion-icon">▾</span>
+          </button>
+          <div class="mvg-accordion-panel">
+            <div class="mvg-accordion-links">
+              <a href="#tw-id-30">ID 30mm / OD 60mm</a>
+              <a href="#tw-id-45">ID 45mm / OD 75mm</a>
+              <a href="#tw-id-85">ID 85mm / OD 125mm</a>
+              <a href="#tw-id-115">ID 115mm / OD 170mm</a>
+              <a href="#all-tape-wound-ring-ct" style="color: var(--mvg-brand); font-weight: 700;">View All Tape Wound CTs &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 4: Resin Cast Rectangular CT -->
+        <div class="mvg-accordion-item">
+          <button type="button" class="mvg-accordion-trigger">
+            <span>Resin Cast Rectangular CT</span>
+            <span class="mvg-accordion-icon">▾</span>
+          </button>
+          <div class="mvg-accordion-panel">
+            <div class="mvg-accordion-links">
+              <a href="#rc-rect-40">40 × 10 mm Busbar Window</a>
+              <a href="#rc-rect-60">60 × 10 mm Busbar Window</a>
+              <a href="#rc-rect-80">80 × 10 mm Heavy Busbar</a>
+              <a href="#rc-rect-100">100 × 10 mm Incomer Busbar</a>
+              <a href="#all-resin-cast-rectangular-ct" style="color: var(--mvg-brand); font-weight: 700;">View All Resin Cast Rectangular &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 5: Resin Cast Ring CT -->
+        <div class="mvg-accordion-item">
+          <button type="button" class="mvg-accordion-trigger">
+            <span>Resin Cast Ring CT</span>
+            <span class="mvg-accordion-icon">▾</span>
+          </button>
+          <div class="mvg-accordion-panel">
+            <div class="mvg-accordion-links">
+              <a href="#rc-ring-35">35 mm Internal Bore</a>
+              <a href="#rc-ring-50">50 mm Cable Incomer</a>
+              <a href="#rc-ring-70">70 mm Power Conductor</a>
+              <a href="#rc-ring-120">120 mm Feeder Core</a>
+              <a href="#all-resin-cast-ring-ct" style="color: var(--mvg-brand); font-weight: 700;">View All Resin Cast Ring &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 6: Split Core CT -->
+        <div class="mvg-accordion-item">
+          <button type="button" class="mvg-accordion-trigger">
+            <span>Split Core CT</span>
+            <span class="mvg-accordion-icon">▾</span>
+          </button>
+          <div class="mvg-accordion-panel">
+            <div class="mvg-accordion-links">
+              <a href="#sc-win-24">24 mm Clamp-on Window</a>
+              <a href="#sc-win-50">50 mm Busbar Clamp</a>
+              <a href="#sc-win-80">80 × 50 mm Rectangular Split</a>
+              <a href="#sc-win-120">120 × 80 mm Large Busbar</a>
+              <a href="#all-split-core-ct" style="color: var(--mvg-brand); font-weight: 700;">View All Split Core CTs &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Utility Links -->
+        <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--mvg-slate-200); display: flex; flex-direction: column; gap: 10px;">
+          <a href="#wholesale-matrix" style="font-size: 14px; font-weight: 600; color: var(--mvg-slate-800);">B2B Wholesale Matrix</a>
+          <a href="#workshop-specials" style="font-size: 14px; font-weight: 600; color: var(--mvg-slate-800);">Workshop Specials</a>
+          <a href="tel:+917836004040" style="font-size: 14px; font-weight: 600; color: var(--mvg-brand);">📞 Direct Support: +91 78360 04040</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Footer with WhatsApp Action -->
+    <div class="mvg-drawer-footer">
+      <a href="https://wa.me/917836004040?text=Hello%20MVG%20Power%20Solutions,%20I%20need%20product%20support." target="_blank" rel="noopener" class="mvg-btn-whatsapp-drawer">
+        <span>💬 Instant WhatsApp Quotation</span>
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- =====================================================================
+       HERO BANNER SECTION
+       ===================================================================== -->
+  <section class="mvg-hero-banner-section" aria-label="MVG Current Transformer Lineup">
+    <div class="mvg-banner-container">
+      <div class="mvg-banner-wrapper">
+        <img 
+          src="assets/banner.jpg" 
+          alt="MVG Current Transformer - Precision, Reliability, Performance" 
+          class="mvg-banner-img"
+          width="1200" 
+          height="400"
+          loading="eager" 
+          fetchpriority="high"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       OUR CURRENT TRANSFORMER COLLECTION (4-COLUMN GRID)
+       ===================================================================== -->
+  <section class="mvg-collection-section" aria-labelledby="collectionHeading">
+    <div class="mvg-collection-container">
+      
+      <!-- Section Header -->
+      <div class="mvg-collection-header">
+        <h2 id="collectionHeading" class="mvg-collection-title">Our Current Transformer Collection</h2>
+      </div>
+
+      <!-- Category Cards Grid (6 Categories) -->
+      <div class="mvg-categories-grid">
+
+        <!-- Card 1: Encapsulated Square CT -->
+        <a href="collections.html?category=encapsulated-square-ct" class="mvg-cat-card" title="Browse Encapsulated Square Current Transformers">
+          <div class="mvg-cat-media">
+            <img 
+              src="assets/categories/encapsulated-square-ct.jpg" 
+              alt="Encapsulated Square Current Transformer" 
+              loading="lazy"
+              width="300"
+              height="300"
+            >
+          </div>
+          <div class="mvg-cat-info">
+            <h3 class="mvg-cat-name">Encapsulated Square CT</h3>
+            <div class="mvg-cat-action">
+              <span>View Products</span>
+              <span class="mvg-cat-action-icon" aria-hidden="true">&rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2: Encapsulated Ring CT -->
+        <a href="collections.html?category=encapsulated-ring-ct" class="mvg-cat-card" title="Browse Encapsulated Ring Current Transformers">
+          <div class="mvg-cat-media">
+            <img 
+              src="assets/categories/encapsulated-ring-ct.jpg" 
+              alt="Encapsulated Ring Current Transformer" 
+              loading="lazy"
+              width="300"
+              height="300"
+            >
+          </div>
+          <div class="mvg-cat-info">
+            <h3 class="mvg-cat-name">Encapsulated Ring CT</h3>
+            <div class="mvg-cat-action">
+              <span>View Products</span>
+              <span class="mvg-cat-action-icon" aria-hidden="true">&rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3: Tape Wound Ring CT -->
+        <a href="collections.html?category=tape-wound-ring-ct" class="mvg-cat-card" title="Browse Tape Wound Ring Current Transformers">
+          <div class="mvg-cat-media">
+            <img 
+              src="assets/categories/tape-wound-ring-ct.jpg" 
+              alt="Tape Wound Ring Current Transformer" 
+              loading="lazy"
+              width="300"
+              height="300"
+            >
+          </div>
+          <div class="mvg-cat-info">
+            <h3 class="mvg-cat-name">Tape Wound Ring CT</h3>
+            <div class="mvg-cat-action">
+              <span>View Products</span>
+              <span class="mvg-cat-action-icon" aria-hidden="true">&rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 4: Resin Cast Rectangular CT -->
+        <a href="collections.html?category=resin-cast-rectangular-ct" class="mvg-cat-card" title="Browse Resin Cast Rectangular Current Transformers">
+          <div class="mvg-cat-media">
+            <img 
+              src="assets/categories/resin-cast-rectangular-ct.jpg" 
+              alt="Resin Cast Rectangular Current Transformer" 
+              loading="lazy"
+              width="300"
+              height="300"
+            >
+          </div>
+          <div class="mvg-cat-info">
+            <h3 class="mvg-cat-name">Resin Cast Rectangular CT</h3>
+            <div class="mvg-cat-action">
+              <span>View Products</span>
+              <span class="mvg-cat-action-icon" aria-hidden="true">&rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 5: Resin Cast Ring CT -->
+        <a href="collections.html?category=resin-cast-ring-ct" class="mvg-cat-card" title="Browse Resin Cast Ring Current Transformers">
+          <div class="mvg-cat-media">
+            <img 
+              src="assets/categories/resin-cast-ring-ct.jpg" 
+              alt="Resin Cast Ring Current Transformer" 
+              loading="lazy"
+              width="300"
+              height="300"
+            >
+          </div>
+          <div class="mvg-cat-info">
+            <h3 class="mvg-cat-name">Resin Cast Ring CT</h3>
+            <div class="mvg-cat-action">
+              <span>View Products</span>
+              <span class="mvg-cat-action-icon" aria-hidden="true">&rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 6: Split Core CT -->
+        <a href="collections.html?category=split-core-ct" class="mvg-cat-card" title="Browse Split Core Current Transformers">
+          <div class="mvg-cat-media">
+            <img 
+              src="assets/categories/split-core-ct.jpg" 
+              alt="Split Core Current Transformer" 
+              loading="lazy"
+              width="300"
+              height="300"
+            >
+          </div>
+          <div class="mvg-cat-info">
+            <h3 class="mvg-cat-name">Split Core CT</h3>
+            <div class="mvg-cat-action">
+              <span>View Products</span>
+              <span class="mvg-cat-action-icon" aria-hidden="true">&rarr;</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SITE FOOTER (MVG INDUSTRIAL DESIGN SYSTEM)
+       ===================================================================== -->
+  <footer class="mvg-site-footer" role="contentinfo">
+    
+    <!-- 1. Value Assurances & Guarantees Strip -->
+    <div class="mvg-footer-features">
+      <div class="mvg-header-container">
+        <div class="mvg-features-grid">
+          
+          <div class="mvg-feature-item">
+            <div class="mvg-feature-icon" aria-hidden="true">⚡</div>
+            <div class="mvg-feature-text">
+              <strong>Same-Day Dispatch</strong>
+              <span>Delhi NCR Central Warehouse Hub</span>
+            </div>
+          </div>
+
+          <div class="mvg-feature-item">
+            <div class="mvg-feature-icon" aria-hidden="true">🛡️</div>
+            <div class="mvg-feature-text">
+              <strong>100% Tested Quality</strong>
+              <span>Complies with IS 2705 &amp; IEC 61869-2</span>
+            </div>
+          </div>
+
+          <div class="mvg-feature-item">
+            <div class="mvg-feature-icon" aria-hidden="true">📑</div>
+            <div class="mvg-feature-text">
+              <strong>18% GST Tax Credit</strong>
+              <span>Valid Tax Invoicing for B2B Clients</span>
+            </div>
+          </div>
+
+          <div class="mvg-feature-item">
+            <div class="mvg-feature-icon" aria-hidden="true">💬</div>
+            <div class="mvg-feature-text">
+              <strong>Instant Procurement</strong>
+              <span>Official Direct WhatsApp Assistance</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Main Footer Navigation & Contact Links -->
+    <div class="mvg-footer-main">
+      <div class="mvg-header-container">
+        <div class="mvg-footer-grid">
+
+          <!-- Col 1: Brand & Contact -->
+          <div class="mvg-footer-brand">
+            <a href="/" class="mvg-footer-logo-wrap" title="MVG Power Solutions">
+              <img src="assets/Logo-11.png" alt="MVG Power Solutions" width="150" height="38">
+            </a>
+            <span class="mvg-footer-tagline">Power You Trust</span>
+            <p class="mvg-footer-desc">
+              Premier manufacturer and wholesale distributor of industrial Current Transformers (CTs) and Digital Meters. Delivering precision measurement, high durability, and certified reliability for switchboards and power distribution panels across India.
+            </p>
+            <div class="mvg-footer-contact-pills">
+              <a href="https://wa.me/917836004040" target="_blank" rel="noopener" class="mvg-footer-contact-pill">
+                <span>💬 WhatsApp Support</span>
+              </a>
+              <a href="tel:+917836004040" class="mvg-footer-contact-pill">
+                <span>📞 +91 78360 04040</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2: Core CT Categories -->
+          <div class="mvg-footer-col">
+            <h4 class="mvg-footer-title">Transformer Categories</h4>
+            <ul class="mvg-footer-links">
+              <li><a href="#encapsulated-square-ct">Encapsulated Square CT</a></li>
+              <li><a href="#encapsulated-ring-ct">Encapsulated Ring CT</a></li>
+              <li><a href="#tape-wound-ring-ct">Tape Wound Ring CT</a></li>
+              <li><a href="#resin-cast-rectangular-ct">Resin Cast Rectangular CT</a></li>
+              <li><a href="#resin-cast-ring-ct">Resin Cast Ring CT</a></li>
+              <li><a href="#split-core-ct">Split Core CT</a></li>
+              <li><a href="#digital-meters">Digital Energy Meters</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Engineering & B2B Solutions -->
+          <div class="mvg-footer-col">
+            <h4 class="mvg-footer-title">B2B &amp; Engineering</h4>
+            <ul class="mvg-footer-links">
+              <li><a href="#wholesale-matrix">B2B Wholesale Rate Matrix</a></li>
+              <li><a href="#custom-ratios">Custom Primary Currents (30A–4000A)</a></li>
+              <li><a href="#class-metering">Class 1.0 &amp; Class 0.5 Metering</a></li>
+              <li><a href="#standards">IS 2705 &amp; IEC 61869-2 Standards</a></li>
+              <li><a href="#workshop-crates">Workshop Wholesale Crates</a></li>
+              <li><a href="#gst-billing">GST Invoicing &amp; Input Tax Credit</a></li>
+              <li><a href="#testing-lab">Routine Factory Test Reports</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Factory & Operating Details -->
+          <div class="mvg-footer-col">
+            <h4 class="mvg-footer-title">Factory &amp; Logistics Hub</h4>
+            <ul class="mvg-footer-address-list">
+              <li class="mvg-footer-address-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>
+                  <strong>MVG Power Solutions</strong><br>
+                  R-458, Ground Floor, R Block,<br>
+                  Mangol Puri, New Delhi – 110083, India
+                </span>
+              </li>
+              <li class="mvg-footer-address-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <a href="tel:+917836004040">+91 78360 04040</a>
+              </li>
+              <li class="mvg-footer-address-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <a href="mailto:info@mvgpowersolutions.com">info@mvgpowersolutions.com</a>
+              </li>
+              <li class="mvg-footer-address-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Mon – Sat: 9:30 AM – 7:30 PM (Sun: Closed)</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Footer Bottom Legal & Copyright Bar -->
+    <div class="mvg-footer-bottom">
+      <div class="mvg-header-container">
+        <div>
+          <span>&copy; 2026 <strong>MVG Power Solutions</strong>. All rights reserved. Power You Trust.</span>
+        </div>
+        <div class="mvg-footer-badges">
+          <span class="mvg-footer-pill-tag">🇮🇳 Made in India</span>
+          <span class="mvg-footer-pill-tag">✓ 100% Factory Routine Tested</span>
+          <span class="mvg-footer-pill-tag">🚚 Delhi NCR Dispatch Hub</span>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Header Scripts -->
+  <script src="js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+[
+  {
+    "id": 58,
+    "name": "Encapsulated Ring CT",
+    "slug": "encapsulated-ring-ct",
+    "description": "",
+    "parent": 0,
+    "count": 24,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://www.mvgpowersolutions.com/product-category/encapsulated-ring-ct/"
+  },
+  {
+    "id": 43,
+    "name": "Encapsulated Square CT",
+    "slug": "encapsulated-square-ct",
+    "description": "",
+    "parent": 0,
+    "count": 16,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://www.mvgpowersolutions.com/product-category/encapsulated-square-ct/"
+  },
+  {
+    "id": 60,
+    "name": "Ring CT",
+    "slug": "ring-ct",
+    "description": "",
+    "parent": 0,
+    "count": 24,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://www.mvgpowersolutions.com/product-category/ring-ct/"
+  },
+  {
+    "id": 59,
+    "name": "Square CT",
+    "slug": "square-ct",
+    "description": "",
+    "parent": 0,
+    "count": 16,
+    "image": null,
+    "review_count": 0,
+    "permalink": "https://www.mvgpowersolutions.com/product-category/square-ct/"
+  }
+]
