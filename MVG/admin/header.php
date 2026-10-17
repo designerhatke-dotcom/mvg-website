@@ -4,6 +4,7 @@
  */
 
 require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/../config/settings.php';
 requireAdminAuth();
 
 $currentAdmin = getLoggedInAdmin();
@@ -14,13 +15,13 @@ $activePage = basename($_SERVER['PHP_SELF'], '.php');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $adminTitle ?? 'Admin Dashboard'; ?> — <?php echo SITE_NAME; ?></title>
+  <title><?php echo $adminTitle ?? 'Admin Dashboard'; ?> — <?php echo Settings::get('general.site_name', SITE_NAME); ?></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --sidebar-w: 240px;
+      --sidebar-w: 260px;
       --navy: #0F172A;
       --navy-light: #1E293B;
       --border: #E2E8F0;
@@ -376,33 +377,118 @@ $activePage = basename($_SERVER['PHP_SELF'], '.php');
     </div>
 
     <ul class="sidebar-menu">
-      <li class="menu-header">Overview</li>
+      <!-- OVERVIEW -->
+      <li class="menu-header">OVERVIEW</li>
       <li class="menu-item <?php echo ($activePage === 'index') ? 'active' : ''; ?>">
         <a href="index.php">📊 Dashboard</a>
       </li>
 
-      <li class="menu-header">Catalog &amp; Inventory</li>
+      <!-- CATALOG & INVENTORY -->
+      <li class="menu-header">CATALOG &amp; INVENTORY</li>
       <li class="menu-item <?php echo ($activePage === 'products') ? 'active' : ''; ?>">
         <a href="products.php">⚡ Products</a>
       </li>
       <li class="menu-item <?php echo ($activePage === 'product_form') ? 'active' : ''; ?>">
-        <a href="product_form.php">+ Add New Product</a>
+        <a href="product_form.php">➕ Add New Product</a>
       </li>
       <li class="menu-item <?php echo ($activePage === 'categories') ? 'active' : ''; ?>">
         <a href="categories.php">📁 Categories</a>
       </li>
-
-      <li class="menu-header">Sales &amp; Feedback</li>
-      <li class="menu-item <?php echo ($activePage === 'inquiries') ? 'active' : ''; ?>">
-        <a href="inquiries.php">💬 Inquiries &amp; RFQs</a>
+      <li class="menu-item <?php echo ($activePage === 'categories' && isset($_GET['tab']) && $_GET['tab'] === 'subcategories') ? 'active' : ''; ?>">
+        <a href="categories.php?tab=subcategories">↳ Subcategories</a>
       </li>
-      <li class="menu-item <?php echo ($activePage === 'reviews') ? 'active' : ''; ?>">
-        <a href="reviews.php">⭐ Customer Reviews</a>
+      <li class="menu-item <?php echo ($activePage === 'brands') ? 'active' : ''; ?>">
+        <a href="brands.php">🏷️ Brands</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'specifications') ? 'active' : ''; ?>">
+        <a href="specifications.php">📐 Product Specifications</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'products_import_export') ? 'active' : ''; ?>">
+        <a href="products_import_export.php">📦 Bulk Import / Export</a>
       </li>
 
-      <li class="menu-header">Database &amp; System</li>
-      <li class="menu-item">
-        <a href="../database/import_seed.php" target="_blank">🗄️ phpMyAdmin Migration ↗</a>
+      <!-- WEBSITE MANAGEMENT -->
+      <li class="menu-header">WEBSITE MANAGEMENT</li>
+      <li class="menu-item <?php echo ($activePage === 'settings_general') ? 'active' : ''; ?>">
+        <a href="settings_general.php">🌐 General Settings</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'header_navigation') ? 'active' : ''; ?>">
+        <a href="header_navigation.php">🧭 Header &amp; Navigation</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'mega_menu') ? 'active' : ''; ?>">
+        <a href="mega_menu.php">📑 Mega Menu Builder</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'settings_contact') ? 'active' : ''; ?>">
+        <a href="settings_contact.php">🏢 Contact &amp; Business Details</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'social_media') ? 'active' : ''; ?>">
+        <a href="social_media.php">🔗 Social Media Links</a>
+      </li>
+
+      <!-- MEDIA MANAGEMENT -->
+      <li class="menu-header">MEDIA MANAGEMENT</li>
+      <li class="menu-item <?php echo ($activePage === 'media') ? 'active' : ''; ?>">
+        <a href="media.php">🖼️ Media Library</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'media_upload') ? 'active' : ''; ?>">
+        <a href="media_upload.php">⬆️ Upload Images</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'image_seo') ? 'active' : ''; ?>">
+        <a href="image_seo.php">🎯 Image SEO Manager</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'media_galleries') ? 'active' : ''; ?>">
+        <a href="media_galleries.php">📸 Product Galleries</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'datasheets') ? 'active' : ''; ?>">
+        <a href="datasheets.php">📑 Documents &amp; Datasheets</a>
+      </li>
+
+      <!-- SEO MANAGEMENT -->
+      <li class="menu-header">SEO MANAGEMENT</li>
+      <li class="menu-item <?php echo ($activePage === 'seo_settings') ? 'active' : ''; ?>">
+        <a href="seo_settings.php">🚀 Global SEO Settings</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'seo_pages') ? 'active' : ''; ?>">
+        <a href="seo_pages.php">📄 Page SEO</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'seo_products') ? 'active' : ''; ?>">
+        <a href="seo_products.php">⚡ Product SEO</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'seo_categories') ? 'active' : ''; ?>">
+        <a href="seo_categories.php">📁 Category SEO</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'seo_sitemap') ? 'active' : ''; ?>">
+        <a href="seo_sitemap.php">🗺️ XML Sitemap Settings</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'redirects') ? 'active' : ''; ?>">
+        <a href="redirects.php">🔀 Redirect Manager</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'seo_robots') ? 'active' : ''; ?>">
+        <a href="seo_robots.php">🤖 Robots.txt Settings</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'seo_schema') ? 'active' : ''; ?>">
+        <a href="seo_schema.php">🏷️ Schema Markup</a>
+      </li>
+
+      <!-- DATABASE & SYSTEM -->
+      <li class="menu-header">DATABASE &amp; SYSTEM</li>
+      <li class="menu-item <?php echo ($activePage === 'database_mgmt') ? 'active' : ''; ?>">
+        <a href="database_mgmt.php">🗄️ Database Management</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'backup_restore') ? 'active' : ''; ?>">
+        <a href="backup_restore.php">💾 Backup &amp; Restore</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'integrations') ? 'active' : ''; ?>">
+        <a href="integrations.php">🔌 Integrations</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'users') ? 'active' : ''; ?>">
+        <a href="users.php">👥 User Management</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'roles') ? 'active' : ''; ?>">
+        <a href="roles.php">🛡️ Roles &amp; Permissions</a>
+      </li>
+      <li class="menu-item <?php echo ($activePage === 'system_logs') ? 'active' : ''; ?>">
+        <a href="system_logs.php">📋 System Logs</a>
       </li>
       <li class="menu-item <?php echo ($activePage === 'settings') ? 'active' : ''; ?>">
         <a href="settings.php">⚙️ Site Settings</a>

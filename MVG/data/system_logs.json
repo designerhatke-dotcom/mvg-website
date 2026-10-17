@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "event": "Admin Login",
+    "user": "admin",
+    "ip": "127.0.0.1",
+    "status": "Success",
+    "timestamp": "2026-10-17 19:42:10"
+  },
+  {
+    "id": 2,
+    "event": "Category Added",
+    "user": "admin",
+    "ip": "127.0.0.1",
+    "status": "Success",
+    "timestamp": "2026-10-17 20:15:33"
+  },
+  {
+    "id": 3,
+    "event": "Settings Synchronized",
+    "user": "admin",
+    "ip": "127.0.0.1",
+    "status": "Success",
+    "timestamp": "2026-10-17 20:30:00"
+  }
+]

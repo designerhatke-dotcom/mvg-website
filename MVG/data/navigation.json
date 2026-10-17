@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "label": "All Collections",
+    "url": "collections.php",
+    "type": "page",
+    "new_tab": false,
+    "enabled": true,
+    "sort": 1
+  },
+  {
+    "id": 2,
+    "label": "Encapsulated Square CT",
+    "url": "category.php?slug=encapsulated-square-ct",
+    "type": "category",
+    "new_tab": false,
+    "enabled": true,
+    "sort": 2
+  },
+  {
+    "id": 3,
+    "label": "Encapsulated Ring CT",
+    "url": "category.php?slug=encapsulated-ring-ct",
+    "type": "category",
+    "new_tab": false,
+    "enabled": true,
+    "sort": 3
+  },
+  {
+    "id": 4,
+    "label": "Tape Wound Ring CT",
+    "url": "category.php?slug=tape-wound-ring-ct",
+    "type": "category",
+    "new_tab": false,
+    "enabled": true,
+    "sort": 4
+  },
+  {
+    "id": 5,
+    "label": "Resin Cast Rectangular CT",
+    "url": "category.php?slug=resin-cast-rectangular-ct",
+    "type": "category",
+    "new_tab": false,
+    "enabled": true,
+    "sort": 5
+  },
+  {
+    "id": 6,
+    "label": "Resin Cast Ring CT",
+    "url": "category.php?slug=resin-cast-ring-ct",
+    "type": "category",
+    "new_tab": false,
+    "enabled": true,
+    "sort": 6
+  },
+  {
+    "id": 7,
+    "label": "Split Core CT",
+    "url": "category.php?slug=split-core-ct",
+    "type": "category",
+    "new_tab": false,
+    "enabled": true,
+    "sort": 7
+  }
+]

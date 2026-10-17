@@ -1,0 +1,81 @@
+{
+  "general": {
+    "site_name": "MVG Power Solutions",
+    "legal_name": "MVG Power Solutions Private Limited",
+    "tagline": "Power You Trust — Precision Current Transformers",
+    "site_url": "https://www.mvgpowersolutions.com/mvg",
+    "logo_url": "assets/Logo-11.png",
+    "logo_light": "assets/Logo-11.png",
+    "logo_dark": "assets/Logo-11.png",
+    "logo_mobile": "assets/Logo-11.png",
+    "logo_width": 180,
+    "logo_height": 48,
+    "favicon_url": "assets/favicon.ico",
+    "default_language": "en",
+    "default_currency": "INR",
+    "currency_symbol": "₹",
+    "timezone": "Asia/Kolkata",
+    "copyright_text": "© 2026 MVG Power Solutions. All Rights Reserved. IS 2705 Certified.",
+    "maintenance_mode": false,
+    "default_min_qty": 10,
+    "gst_rate": 18
+  },
+  "business": {
+    "company_name": "MVG Power Solutions",
+    "business_type": "Manufacturer",
+    "registered_address": "R-458, Ground Floor, R Block, Mangol Puri, New Delhi – 110083, India",
+    "warehouse_address": "Central Logistics Hub, Phase-II, Mayapuri Industrial Area, New Delhi – 110064, India",
+    "gstin": "07AAECM4040N1Z5",
+    "pan_number": "AAECM4040N",
+    "phone_primary": "+91 78360 04040",
+    "phone_alternate": "+91 99991 76722",
+    "whatsapp_number": "917836004040",
+    "whatsapp_default_message": "Hello MVG Power Solutions, I have an inquiry regarding industrial current transformers.",
+    "email_business": "info@mvgpowersolutions.com",
+    "email_sales": "sales@mvgpowersolutions.com",
+    "email_support": "support@mvgpowersolutions.com",
+    "business_hours": "Monday – Saturday: 9:00 AM – 7:00 PM IST (Sunday Closed)",
+    "google_maps_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.88219572459!2d77.086392!3d28.693155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQxJzM1LjQiTiA3N8KwMDUnMTEuMCJF!5e0!3m2!1sen!2sin!4v1600000000000",
+    "google_business_url": "https://share.google/TMbb3NtBqtNhvrcuP"
+  },
+  "header": {
+    "header_bg": "#FFFFFF",
+    "nav_text_color": "#0F172A",
+    "nav_hover_color": "#0284C7",
+    "nav_active_color": "#0284C7",
+    "header_height": 76,
+    "sticky_header": true,
+    "transparent_header": false,
+    "search_visible": true,
+    "cta_text": "Request Quote",
+    "cta_url": "https://wa.me/917836004040"
+  },
+  "social": {
+    "facebook": "https://facebook.com/mvgpowersolutions",
+    "linkedin": "https://linkedin.com/company/mvg-power-solutions",
+    "instagram": "https://instagram.com/mvgpowersolutions",
+    "youtube": "https://youtube.com/@mvgpowersolutions",
+    "twitter": "https://twitter.com/mvgpower"
+  },
+  "seo": {
+    "meta_title": "MVG Power Solutions | Precision Current Transformers Class 1.0 & 0.5",
+    "meta_description": "Leading Indian manufacturer of IS 2705 certified current transformers. Ring CT, Square CT, Tape Wound, Resin Cast & Split Core CT with 18% GST Input Tax Credit.",
+    "canonical_base": "https://www.mvgpowersolutions.com/mvg/",
+    "og_title": "MVG Power Solutions — Certified Current Transformers",
+    "og_description": "Factory-direct pricing on industrial CTs for switchboards and LT control panels. Dispatch within 24 hours.",
+    "og_image": "assets/categories/encapsulated-ring-ct.jpg",
+    "twitter_card": "summary_large_image",
+    "robots_index": true,
+    "robots_follow": true,
+    "google_site_verification": "",
+    "bing_verification": ""
+  },
+  "integrations": {
+    "ga4_measurement_id": "G-XXXXXXXXXX",
+    "google_search_console_id": "",
+    "gtm_container_id": "",
+    "meta_pixel_id": "",
+    "whatsapp_cloud_api_key": "",
+    "webhook_order_endpoint": ""
+  }
+}

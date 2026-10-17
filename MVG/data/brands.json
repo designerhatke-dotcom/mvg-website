@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "MVG Power Solutions",
+    "slug": "mvg-power-solutions",
+    "country": "India",
+    "description": "OEM Factory-Direct precision metering current transformers and digital meters.",
+    "is_default": true
+  },
+  {
+    "id": 2,
+    "name": "MVG Custom Lab",
+    "slug": "mvg-custom-lab",
+    "country": "India",
+    "description": "Bespoke engineered primary/secondary ratios and special burden VA transformers.",
+    "is_default": false
+  }
+]

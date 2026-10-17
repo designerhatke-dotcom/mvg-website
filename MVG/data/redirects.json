@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "source_url": "product-category/encapsulated-ring-ct",
+    "target_url": "category.php?slug=encapsulated-ring-ct",
+    "status_code": 301,
+    "hits": 14,
+    "created_at": "2026-10-17"
+  },
+  {
+    "id": 2,
+    "source_url": "product-category/encapsulated-square-ct",
+    "target_url": "category.php?slug=encapsulated-square-ct",
+    "status_code": 301,
+    "hits": 28,
+    "created_at": "2026-10-17"
+  }
+]

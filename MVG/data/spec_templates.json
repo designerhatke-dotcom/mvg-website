@@ -1,0 +1,16 @@
+[
+  {"key": "Primary Current", "unit": "A", "type": "text", "default": "30A - 4000A"},
+  {"key": "Secondary Current", "unit": "A", "type": "select", "options": ["5A", "1A"], "default": "5A"},
+  {"key": "Accuracy Class", "unit": "", "type": "select", "options": ["Class 1.0", "Class 0.5", "Class 0.2S", "Class 0.5S"], "default": "Class 1.0"},
+  {"key": "Rated Burden (VA)", "unit": "VA", "type": "select", "options": ["2.5 VA", "5 VA", "10 VA", "15 VA"], "default": "5 VA"},
+  {"key": "Inner Diameter / Aperture", "unit": "mm", "type": "text", "default": "30mm / 45mm / 60mm / 85mm / 115mm"},
+  {"key": "Outer Diameter", "unit": "mm", "type": "text", "default": "75mm - 165mm"},
+  {"key": "System Voltage", "unit": "V", "type": "text", "default": "660V / 720V Max (LT)"},
+  {"key": "Rated Frequency", "unit": "Hz", "type": "select", "options": ["50 Hz", "50/60 Hz", "60 Hz"], "default": "50 Hz"},
+  {"key": "Insulation Level", "unit": "", "type": "text", "default": "3 kV for 1 min"},
+  {"key": "Mounting Type", "unit": "", "type": "text", "default": "Busbar Clamp / Base Plate / DIN Rail"},
+  {"key": "Window Type", "unit": "", "type": "select", "options": ["Round Window", "Square Window", "Rectangular Window"], "default": "Round Window"},
+  {"key": "Operating Temperature", "unit": "°C", "type": "text", "default": "-10°C to +55°C"},
+  {"key": "Compliance Standard", "unit": "", "type": "text", "default": "IS 2705 Part 1 & 2 / IEC 61869-2"},
+  {"key": "Thermal Short Circuit Current", "unit": "kA", "type": "text", "default": "60 x Ipn for 1 sec"}
+]

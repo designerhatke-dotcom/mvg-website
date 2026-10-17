@@ -99,6 +99,45 @@ class Database {
      * Get a single product by ID or slug with full specs and images
      */
     public static function getProductById($idOrSlug) {
+        $sTarget = strtolower(trim($idOrSlug));
+        
+        // 1. Try MySQL if connected
+        $pdo = self::getConnection();
+        if ($pdo) {
+            try {
+                $stmt = $pdo->prepare("SELECT * FROM products WHERE id = ? OR slug = ? OR sku = ? LIMIT 1");
+                $stmt->execute([$idOrSlug, $sTarget, $sTarget]);
+                $row = $stmt->fetch();
+                if ($row) {
+                    $catStmt = $pdo->prepare("SELECT name, slug FROM categories WHERE id = ?");
+                    $catStmt->execute([$row['category_id']]);
+                    $cat = $catStmt->fetch() ?: ['name' => 'Current Transformers', 'slug' => 'encapsulated-ring-ct'];
+                    
+                    return [
+                        'id'                => $row['id'],
+                        'name'              => $row['name'],
+                        'slug'              => $row['slug'],
+                        'sku'               => $row['sku'],
+                        'price'             => floatval($row['price']),
+                        'category'          => $cat['slug'],
+                        'categoryName'      => $cat['name'],
+                        'sub_category'      => '',
+                        'image'             => $row['featured_image'] ?: 'assets/categories/' . $cat['slug'] . '.jpg',
+                        'images'            => [$row['featured_image'] ?: 'assets/categories/' . $cat['slug'] . '.jpg'],
+                        'short_description' => $row['short_description'] ?? '',
+                        'description'       => $row['description'] ?? '',
+                        'specs'             => [
+                            'Accuracy Class' => 'Class 1.0 (IS 2705)',
+                            'Secondary Current' => '5A',
+                            'Standard' => 'IS 2705 / IEC 61869-2'
+                        ],
+                        'minQty'            => $row['min_qty'] ?: DEFAULT_MIN_QTY
+                    ];
+                }
+            } catch (Exception $e) {}
+        }
+
+        // 2. Fallback to products.json
         $jsonPath = __DIR__ . '/../data/products.json';
         if (!file_exists($jsonPath)) return null;
 
@@ -106,7 +145,11 @@ class Database {
         if (!$raw) return null;
 
         foreach ($raw as $p) {
-            if ($p['id'] == $idOrSlug || ($p['slug'] ?? '') === $idOrSlug) {
+            $pSlug = strtolower(trim($p['slug'] ?? ''));
+            $genSlug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $p['name'] ?? ''), '-'));
+            $pSku = strtolower(trim($p['sku'] ?? ''));
+
+            if ($p['id'] == $idOrSlug || $pSlug === $sTarget || $genSlug === $sTarget || $pSku === $sTarget) {
                 $cats = $p['categories'] ?? [];
                 $catSlugs = array_column($cats, 'slug');
                 $isSquare = in_array('encapsulated-square-ct', $catSlugs) || in_array('square-ct', $catSlugs);
