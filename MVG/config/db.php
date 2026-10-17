@@ -160,15 +160,23 @@ class Database {
                     'description' => $p['images'][0]['description'] ?? ''
                 ];
 
+                $slug = $p['slug'] ?? ('product-' . $p['id']);
+                $metaTitle = $p['meta_title'] ?? ($p['name'] . ' | ' . SITE_NAME);
+                $metaDesc = $p['meta_description'] ?? ('Buy ' . $p['name'] . ' factory-direct from ' . SITE_NAME . '. Class 1.0 metering, IS 2705 certified with 18% GST Input Tax Credit.');
+                $permalink = $p['permalink'] ?? ('product.php?id=' . $p['id']);
+
                 return [
                     'id'                => $p['id'],
                     'name'              => $p['name'],
-                    'slug'              => $p['slug'] ?? '',
+                    'slug'              => $slug,
+                    'permalink'         => $permalink,
                     'sku'               => $p['sku'] ?? 'MVG-CT-' . $p['id'],
                     'price'             => $price,
                     'category'          => $primaryCat,
                     'categoryName'      => $primaryCatName,
                     'sub_category'      => $subCat,
+                    'meta_title'        => $metaTitle,
+                    'meta_description'  => $metaDesc,
                     'image'             => $images[0],
                     'images'            => $images,
                     'image_meta'        => $imgMeta,

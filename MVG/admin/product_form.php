@@ -57,6 +57,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $galleryAlts = $_POST['gallery_alts'] ?? [];
     $galleryTitles = $_POST['gallery_titles'] ?? [];
 
+    // Product SEO & Permalink Metas
+    $slug = trim($_POST['slug'] ?? '');
+    if (empty($slug)) {
+        $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $name), '-'));
+    }
+    $metaTitle = trim($_POST['meta_title'] ?? '');
+    if (empty($metaTitle)) {
+        $metaTitle = $name . ' | ' . SITE_NAME;
+    }
+    $metaDescription = trim($_POST['meta_description'] ?? '');
+    if (empty($metaDescription)) {
+        $cleanDesc = trim(strip_tags($shortDesc));
+        $metaDescription = !empty($cleanDesc) ? substr($cleanDesc, 0, 155) : ('Buy ' . $name . ' factory-direct from ' . SITE_NAME . '. Class 1.0 metering, IS 2705 certified with 18% GST Input Tax Credit.');
+    }
+    $permalink = trim($_POST['permalink'] ?? '');
+    if (empty($permalink)) {
+        $permalink = 'product.php?slug=' . $slug;
+    }
+
     if (empty($name) || empty($sku)) {
         $errorMsg = 'Product name and SKU are required.';
     } else {
@@ -75,16 +94,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($pdo) {
             try {
                 $catId = ($category === 'encapsulated-square-ct') ? 2 : 1;
-                $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $name), '-'));
 
                 if ($editId) {
                     $stmt = $pdo->prepare("
                         UPDATE products SET 
-                            name = ?, category_id = ?, sku = ?, price = ?, min_qty = ?, 
+                            name = ?, slug = ?, category_id = ?, sku = ?, price = ?, min_qty = ?, 
                             featured_image = ?, short_description = ?, description = ?
                         WHERE id = ?
                     ");
-                    $stmt->execute([$name, $catId, $sku, $price, $minQty, $image, $shortDesc, $fullDesc, $editId]);
+                    $stmt->execute([$name, $slug, $catId, $sku, $price, $minQty, $image, $shortDesc, $fullDesc, $editId]);
                 } else {
                     $stmt = $pdo->prepare("
                         INSERT INTO products (category_id, name, slug, sku, price, min_qty, featured_image, short_description, description)
@@ -134,6 +152,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if ($editId && $p['id'] == $editId) {
                     $p['name'] = $name;
                     $p['sku'] = $sku;
+                    $p['slug'] = $slug;
+                    $p['permalink'] = $permalink;
+                    $p['meta_title'] = $metaTitle;
+                    $p['meta_description'] = $metaDescription;
                     $p['prices']['price'] = strval($price * 100);
                     $p['sub_category'] = $subCategory;
                     $p['image_meta'] = $imageMeta;
@@ -152,7 +174,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'id'                => $newId,
                     'name'              => $name,
                     'sku'               => $sku,
-                    'slug'              => strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $name), '-')),
+                    'slug'              => $slug,
+                    'permalink'         => $permalink,
+                    'meta_title'        => $metaTitle,
+                    'meta_description'  => $metaDescription,
                     'prices'            => ['price' => strval($price * 100)],
                     'categories'        => [
                         ['slug' => $category, 'name' => ($category === 'encapsulated-square-ct' ? 'Encapsulated Square CT' : 'Encapsulated Ring CT')],
@@ -772,8 +797,113 @@ include __DIR__ . '/header.php';
             <?php echo $product['description'] ?? '<h2>Product Overview</h2><p>High-precision current transformer engineered for compatible metering and power management systems.</p>'; ?>
           </div>
         </div>
-        <!-- Hidden input synced with Quill on submit -->
-        <textarea id="description" name="description" style="display: none;"></textarea>
+      <!-- SECTION 4: Product SEO, Meta Title, Description & Permalink -->
+      <div class="section-divider-title">
+        <span>🔍 Search Engine Optimization (SEO) &amp; Permalink</span>
+        <span class="badge" style="background: #FEF3C7; color: #92400E; font-size: 11px;">Google SERP Ready</span>
+      </div>
+
+      <div class="seo-card-wrap" style="background: #ffffff; border: 1px solid var(--border); border-radius: 10px; padding: 22px; margin-bottom: 24px;">
+        
+        <!-- Live Google Search Result Snippet Preview -->
+        <div style="margin-bottom: 22px; padding: 18px 20px; background: #F8FAFC; border: 1px solid var(--border); border-radius: 10px;">
+          <div style="font-size: 11px; font-weight: 700; color: #64748B; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+            <span>🌐 Live Google Search Snippet Preview</span>
+          </div>
+          <div style="font-family: Arial, sans-serif; max-width: 650px;">
+            <div style="font-size: 13px; color: #202124; display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <span style="display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: #0284C7; color: #fff; font-size: 11px; text-align: center; line-height: 18px; font-weight: bold;">M</span>
+              <span style="color: #202124;">www.mvgpowersolutions.com &rsaquo; product &rsaquo; <span id="serpSlugPreview" style="color: #4D5156;"><?php echo htmlspecialchars($product['slug'] ?? '2500-5a-ring-current-transformer-115mm-ct'); ?></span></span>
+            </div>
+            <div id="serpTitlePreview" style="color: #1A0DAB; font-size: 20px; line-height: 1.3; font-weight: 400; cursor: pointer; text-decoration: none; margin-bottom: 4px;">
+              <?php echo htmlspecialchars($product['meta_title'] ?? (($product['name'] ?? 'Current Transformer') . ' | ' . SITE_NAME)); ?>
+            </div>
+            <div id="serpDescPreview" style="color: #4D5156; font-size: 13.5px; line-height: 1.5;">
+              <?php echo htmlspecialchars($product['meta_description'] ?? ('Buy ' . ($product['name'] ?? 'Current Transformers') . ' factory-direct from ' . SITE_NAME . '. Class 1.0 metering, IS 2705 certified with 18% GST Input Tax Credit.')); ?>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <!-- Slug / Permalink -->
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <label for="slug"><strong>Product Slug / URL Permalink *</strong></label>
+              <button type="button" onclick="autoGenerateSlug()" style="background: none; border: none; color: var(--primary); font-size: 12px; font-weight: 700; cursor: pointer;">
+                🔄 Auto-generate from Title
+              </button>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <span style="background: #F1F5F9; border: 1px solid var(--border); border-right: none; padding: 10px 12px; font-size: 13px; color: #64748B; border-top-left-radius: 8px; border-bottom-left-radius: 8px; white-space: nowrap;">
+                https://www.mvgpowersolutions.com/product.php?slug=
+              </span>
+              <input 
+                type="text" 
+                id="slug" 
+                name="slug" 
+                class="form-control" 
+                style="border-top-left-radius: 0; border-bottom-left-radius: 0;"
+                value="<?php echo htmlspecialchars($product['slug'] ?? ''); ?>" 
+                placeholder="2500-5a-ring-current-transformer-115mm-ct"
+                required
+                oninput="updateSerpPreview()"
+              />
+            </div>
+            <span class="field-hint">Defines the friendly URL slug for Google search index (lowercase, numbers, and hyphens).</span>
+          </div>
+
+          <!-- Meta Title -->
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <label for="meta_title"><strong>SEO Meta Title</strong></label>
+              <span id="titleCounter" style="font-size: 11.5px; font-weight: 700; color: #64748B;">0 / 60 chars</span>
+            </div>
+            <input 
+              type="text" 
+              id="meta_title" 
+              name="meta_title" 
+              class="form-control" 
+              value="<?php echo htmlspecialchars($product['meta_title'] ?? ''); ?>" 
+              placeholder="e.g. 2500/5A Ring Current Transformer 115mm CT | Class 1.0 | MVG"
+              maxlength="75"
+              oninput="updateSerpPreview()"
+            />
+            <span class="field-hint">Optimal length: 50–60 characters. Appears as the main headline on Google search engine result pages (SERPs).</span>
+          </div>
+
+          <!-- Meta Description -->
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <label for="meta_description"><strong>SEO Meta Description</strong></label>
+              <span id="descCounter" style="font-size: 11.5px; font-weight: 700; color: #64748B;">0 / 160 chars</span>
+            </div>
+            <textarea 
+              id="meta_description" 
+              name="meta_description" 
+              class="form-control" 
+              rows="3" 
+              placeholder="e.g. Buy 2500/5A Class 1.0 Ring Current Transformer with 115mm ID factory-direct from MVG Power Solutions. Routine test certificates and 18% GST invoice provided."
+              maxlength="175"
+              oninput="updateSerpPreview()"
+            ><?php echo htmlspecialchars($product['meta_description'] ?? ''); ?></textarea>
+            <span class="field-hint">Optimal length: 140–160 characters. Displayed as the search snippet under the title on Google.</span>
+          </div>
+
+          <!-- Custom Permalink / Canonical -->
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label for="permalink"><strong>Custom Canonical URL (Optional)</strong></label>
+            <input 
+              type="text" 
+              id="permalink" 
+              name="permalink" 
+              class="form-control" 
+              value="<?php echo htmlspecialchars($product['permalink'] ?? ''); ?>" 
+              placeholder="https://www.mvgpowersolutions.com/product/2500-5a-ring-current-transformer-115mm-ct/"
+            />
+            <span class="field-hint">Specify canonical URL to prevent duplicate content indexing. Defaults to product URL.</span>
+          </div>
+        </div>
+
       </div>
 
       <!-- Form Actions -->
@@ -1063,6 +1193,55 @@ include __DIR__ . '/header.php';
 
     alert('✓ Swapped! The selected gallery image is now the Primary Product Image.');
   }
+
+  // Live Google SERP Snippet Preview & Character Counters
+  function updateSerpPreview() {
+    const name = document.getElementById('name').value.trim();
+    const slugInput = document.getElementById('slug');
+    const titleInput = document.getElementById('meta_title');
+    const descInput = document.getElementById('meta_description');
+
+    const serpSlug = document.getElementById('serpSlugPreview');
+    const serpTitle = document.getElementById('serpTitlePreview');
+    const serpDesc = document.getElementById('serpDescPreview');
+
+    const titleCounter = document.getElementById('titleCounter');
+    const descCounter = document.getElementById('descCounter');
+
+    if (!serpSlug || !serpTitle || !serpDesc) return;
+
+    // Slug
+    const cleanSlug = slugInput.value.trim() || (name ? name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') : 'product-slug');
+    serpSlug.textContent = cleanSlug;
+
+    // Title
+    const finalTitle = titleInput.value.trim() || (name ? (name + ' | MVG Power Solutions') : 'Product Title | MVG Power Solutions');
+    serpTitle.textContent = finalTitle;
+    const titleLen = titleInput.value.length;
+    titleCounter.textContent = titleLen + ' / 60 chars';
+    titleCounter.style.color = (titleLen >= 50 && titleLen <= 60) ? '#10B981' : (titleLen > 60 ? '#EF4444' : '#64748B');
+
+    // Description
+    const finalDesc = descInput.value.trim() || (name ? ('Buy ' + name + ' factory-direct from MVG Power Solutions. Class 1.0 metering, IS 2705 certified with 18% GST Input Tax Credit.') : 'Product meta description snippet for Google search results.');
+    serpDesc.textContent = finalDesc;
+    const descLen = descInput.value.length;
+    descCounter.textContent = descLen + ' / 160 chars';
+    descCounter.style.color = (descLen >= 140 && descLen <= 160) ? '#10B981' : (descLen > 160 ? '#EF4444' : '#64748B');
+  }
+
+  // Auto-generate Slug from Title
+  function autoGenerateSlug() {
+    const name = document.getElementById('name').value.trim();
+    if (!name) return;
+    const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    document.getElementById('slug').value = slug;
+    updateSerpPreview();
+  }
+
+  // Run initial preview check on page load
+  window.addEventListener('load', function() {
+    updateSerpPreview();
+  });
 </script>
 
 <?php include __DIR__ . '/footer.php'; ?>

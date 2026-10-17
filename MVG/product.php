@@ -23,7 +23,9 @@ if (!$product) {
 // Related products in the same collection
 $relatedProducts = Database::getRelatedProducts($product['id'], $product['category'], 4);
 
-$pageTitle = htmlspecialchars($product['name']) . " | " . SITE_NAME;
+$pageTitle = htmlspecialchars($product['meta_title'] ?? ($product['name'] . " | " . SITE_NAME));
+$metaDesc = htmlspecialchars($product['meta_description'] ?? ("Buy " . $product['name'] . " factory-direct from " . SITE_NAME . ". Class 1.0 metering, IS 2705 certified with 18% GST Input Tax Credit."));
+$canonicalUrl = htmlspecialchars($product['permalink'] ?? ("product.php?id=" . $product['id']));
 $effectiveGstPrice = round($product['price'] * 1.18);
 $minQty = $product['minQty'] ?? DEFAULT_MIN_QTY;
 $initialBasePrice = $product['price'] * $minQty;
@@ -40,7 +42,18 @@ $waUrl = "https://wa.me/" . WHATSAPP_NUMBER . "?text=" . rawurlencode($waMsg);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $pageTitle; ?></title>
-  <meta name="description" content="Buy <?php echo htmlspecialchars($product['name']); ?> factory-direct from MVG Power Solutions. Class 1.0 metering, IS 2705 certified with 18% GST Input Tax Credit." />
+  <meta name="description" content="<?php echo $metaDesc; ?>" />
+  <link rel="canonical" href="<?php echo $canonicalUrl; ?>" />
+
+  <!-- Open Graph / Social Sharing & Google Rich Snippets -->
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="<?php echo $pageTitle; ?>" />
+  <meta property="og:description" content="<?php echo $metaDesc; ?>" />
+  <meta property="og:image" content="<?php echo htmlspecialchars($product['image']); ?>" />
+  <meta property="og:url" content="<?php echo $canonicalUrl; ?>" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<?php echo $pageTitle; ?>" />
+  <meta name="twitter:description" content="<?php echo $metaDesc; ?>" />
 
   <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
