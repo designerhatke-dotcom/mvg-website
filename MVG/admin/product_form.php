@@ -1,7 +1,7 @@
 <?php
 /**
  * MVG Power Solutions — Add / Edit Product
- * Enhanced with Sub-Categories, Rich Text Editors, Image Upload & Image SEO Metas
+ * Enhanced with Sub-Categories, Rich Text Editors, Image Upload, Image SEO Metas & Multi-Image Gallery
  */
 
 require_once __DIR__ . '/../config/constants.php';
@@ -9,9 +9,20 @@ require_once __DIR__ . '/../config/db.php';
 
 $editId = isset($_GET['id']) ? intval($_GET['id']) : null;
 $product = null;
+$existingGallery = [];
 
 if ($editId) {
     $product = Database::getProductById($editId);
+    if (!empty($product['images']) && is_array($product['images'])) {
+        for ($i = 1; $i < count($product['images']); $i++) {
+            $g = $product['images'][$i];
+            $existingGallery[] = [
+                'src'   => is_array($g) ? ($g['src'] ?? '') : (string)$g,
+                'alt'   => is_array($g) ? ($g['alt'] ?? '') : '',
+                'title' => is_array($g) ? ($g['name'] ?? ($g['title'] ?? '')) : ''
+            ];
+        }
+    }
 }
 
 $adminTitle = $editId ? 'Edit Product #' . $editId : 'Add New Product';
@@ -41,9 +52,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $shortDesc = trim($_POST['short_description'] ?? '');
     $fullDesc = trim($_POST['description'] ?? '');
 
-    // Additional Gallery Images (if any)
+    // Additional Gallery Images
     $galleryUrls = $_POST['gallery_images'] ?? [];
     $galleryAlts = $_POST['gallery_alts'] ?? [];
+    $galleryTitles = $_POST['gallery_titles'] ?? [];
 
     if (empty($name) || empty($sku)) {
         $errorMsg = 'Product name and SKU are required.';
@@ -93,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $jsonProducts = json_decode(file_get_contents($jsonPath), true) ?: [];
             $found = false;
 
-            // Build gallery array
+            // Build full images list: Main image at index 0 + Gallery images
             $constructedImages = [];
             $constructedImages[] = [
                 'id'          => 1,
@@ -111,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $constructedImages[] = [
                             'id'   => $gIdx + 2,
                             'src'  => $gUrl,
-                            'name' => $galleryAlts[$gIdx] ?? $name,
+                            'name' => $galleryTitles[$gIdx] ?? ($galleryAlts[$gIdx] ?? $name),
                             'alt'  => $galleryAlts[$gIdx] ?? $name
                         ];
                     }
@@ -160,8 +172,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         if ($saved) {
-            $successMsg = '✓ Product and Image SEO metadata saved successfully! Live on website.';
+            $successMsg = '✓ Product, Gallery, and Image SEO metadata saved successfully! Live on website.';
             $product = Database::getProductById($editId);
+            $existingGallery = [];
+            if (!empty($product['images']) && is_array($product['images'])) {
+                for ($i = 1; $i < count($product['images']); $i++) {
+                    $g = $product['images'][$i];
+                    $existingGallery[] = [
+                        'src'   => is_array($g) ? ($g['src'] ?? '') : (string)$g,
+                        'alt'   => is_array($g) ? ($g['alt'] ?? '') : '',
+                        'title' => is_array($g) ? ($g['name'] ?? ($g['title'] ?? '')) : ''
+                    ];
+                }
+            }
         }
     }
 }
@@ -210,7 +233,7 @@ include __DIR__ . '/header.php';
   .image-uploader-box {
     border: 2px dashed #CBD5E1;
     border-radius: 8px;
-    padding: 24px;
+    padding: 22px;
     text-align: center;
     background: #ffffff;
     cursor: pointer;
@@ -264,7 +287,7 @@ include __DIR__ . '/header.php';
     display: flex;
     align-items: center;
     gap: 8px;
-    margin: 24px 0 12px 0;
+    margin: 28px 0 12px 0;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
   }
@@ -275,6 +298,100 @@ include __DIR__ . '/header.php';
     color: #166534;
     padding: 2px 8px;
     border-radius: 12px;
+  }
+  .badge-gallery {
+    font-size: 11px;
+    font-weight: 700;
+    background: #E0F2FE;
+    color: #0369A1;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+
+  /* Gallery Cards Grid */
+  .gallery-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .gallery-item-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    gap: 12px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+    align-items: flex-start;
+    position: relative;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .gallery-item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  }
+  .gallery-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #F8FAFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .gallery-thumb img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  .gallery-meta {
+    flex: 1;
+    min-width: 0;
+  }
+  .gallery-meta input {
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-family: inherit;
+  }
+  .gallery-meta input:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  .gallery-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .btn-gallery-action {
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.12s;
+  }
+  .btn-set-main {
+    background: #FEF3C7;
+    color: #92400E;
+  }
+  .btn-set-main:hover {
+    background: #FDE68A;
+  }
+  .btn-remove-gallery {
+    background: #FEE2E2;
+    color: #991B1B;
+  }
+  .btn-remove-gallery:hover {
+    background: #FCA5A5;
   }
 </style>
 
@@ -408,9 +525,9 @@ include __DIR__ . '/header.php';
         </div>
       </div>
 
-      <!-- SECTION: Product Images & Image SEO Metas -->
+      <!-- SECTION 1: Main Product Image & SEO Metas -->
       <div class="section-divider-title">
-        <span>🖼️ Product Image &amp; Image SEO Metas</span>
+        <span>⭐ Primary Product Image &amp; Image SEO Metas</span>
         <span class="badge-seo">Google Image SEO Ready</span>
       </div>
 
@@ -419,14 +536,14 @@ include __DIR__ . '/header.php';
         <!-- Image Upload Dropzone -->
         <div class="image-uploader-box" id="dropZone" onclick="document.getElementById('fileInput').click()">
           <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileUpload(this.files[0])" />
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="1.8" style="margin-bottom: 6px;">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="1.8" style="margin-bottom: 6px;">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="17 8 12 3 7 8"></polyline>
             <line x1="12" y1="3" x2="12" y2="15"></line>
           </svg>
-          <div style="font-weight: 700; font-size: 14px; color: var(--navy);">Click to Upload Image or Drag &amp; Drop</div>
-          <div style="font-size: 12px; color: #64748B; margin-top: 4px;">Supports PNG, JPG, WEBP &bull; Automatically saved to <code>assets/products/</code></div>
-          <div id="uploadStatusText" style="margin-top: 8px; font-weight: 600; font-size: 12.5px; color: var(--primary);"></div>
+          <div style="font-weight: 700; font-size: 14px; color: var(--navy);">Click to Upload Main Image or Drag &amp; Drop</div>
+          <div style="font-size: 12px; color: #64748B; margin-top: 4px;">Supports PNG, JPG, WEBP &bull; Uploaded to <code>assets/products/</code></div>
+          <div id="uploadStatusText" style="margin-top: 6px; font-weight: 600; font-size: 12.5px; color: var(--primary);"></div>
         </div>
 
         <!-- Preview & SEO Metas Form -->
@@ -524,7 +641,82 @@ include __DIR__ . '/header.php';
 
       </div>
 
-      <!-- SECTION: Rich Text Editors -->
+      <!-- SECTION 2: Additional Image Gallery -->
+      <div class="section-divider-title">
+        <span>📸 Product Image Gallery (Multi-Angle, Diagrams &amp; Terminals)</span>
+        <span class="badge-gallery">PDP Slider Carousel</span>
+      </div>
+
+      <div class="seo-image-card">
+        
+        <!-- Multi-Image Bulk Uploader -->
+        <div class="image-uploader-box" id="galleryDropZone" onclick="document.getElementById('galleryFileInput').click()" style="background: #FAFAFA;">
+          <input type="file" id="galleryFileInput" multiple accept="image/*" style="display: none;" onchange="handleGalleryUpload(this.files)" />
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="1.8" style="margin-bottom: 6px;">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          <div style="font-weight: 700; font-size: 14px; color: var(--navy);">
+            Click to Add Gallery Images (Multiple Files Supported) or Drag &amp; Drop
+          </div>
+          <div style="font-size: 12px; color: #64748B; margin-top: 4px;">
+            Upload angle shots, dimension diagrams, terminal cover views, or busbar installation photos
+          </div>
+          <div id="galleryUploadStatus" style="margin-top: 6px; font-weight: 600; font-size: 12.5px; color: var(--primary);"></div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px;">
+          <span style="font-size: 13px; font-weight: 700; color: var(--navy);">Gallery Images (<span id="galleryCount"><?php echo count($existingGallery); ?></span>)</span>
+          <button type="button" class="btn-topbar" onclick="addEmptyGalleryItem()" style="padding: 6px 12px; font-size: 12px;">
+            + Add Image by URL
+          </button>
+        </div>
+
+        <!-- Gallery Items Grid -->
+        <div class="gallery-items-grid" id="galleryGrid">
+          <?php foreach ($existingGallery as $gIdx => $gItem): ?>
+            <div class="gallery-item-card" data-idx="<?php echo $gIdx; ?>">
+              <div class="gallery-thumb">
+                <img src="<?php echo htmlspecialchars(strpos($gItem['src'], 'http') === 0 ? $gItem['src'] : '../' . $gItem['src']); ?>" alt="Gallery" onerror="this.src='../assets/categories/encapsulated-ring-ct.jpg'" />
+              </div>
+              <div class="gallery-meta">
+                <input 
+                  type="text" 
+                  name="gallery_images[]" 
+                  value="<?php echo htmlspecialchars($gItem['src']); ?>" 
+                  placeholder="Image URL" 
+                  oninput="updateGalleryThumb(this)" 
+                  required 
+                />
+                <input 
+                  type="text" 
+                  name="gallery_alts[]" 
+                  value="<?php echo htmlspecialchars($gItem['alt']); ?>" 
+                  placeholder="Alt Text (SEO)" 
+                />
+                <input 
+                  type="text" 
+                  name="gallery_titles[]" 
+                  value="<?php echo htmlspecialchars($gItem['title']); ?>" 
+                  placeholder="Title (on hover)" 
+                />
+                <div class="gallery-actions">
+                  <button type="button" class="btn-gallery-action btn-set-main" onclick="promoteToMainImage(this)" title="Swap with Primary Image">
+                    ⭐ Make Primary
+                  </button>
+                  <button type="button" class="btn-gallery-action btn-remove-gallery" onclick="removeGalleryItem(this)" title="Delete image">
+                    🗑️ Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+
+      </div>
+
+      <!-- SECTION 3: Rich Text Editors -->
       <div class="section-divider-title">
         <span>📝 Product Specifications &amp; Overview (Rich Text Editor)</span>
       </div>
@@ -587,7 +779,7 @@ include __DIR__ . '/header.php';
       <!-- Form Actions -->
       <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; gap: 12px; align-items: center;">
         <button type="submit" class="btn-topbar btn-topbar-primary" style="padding: 12px 28px; font-size: 14px; font-weight: 700;">
-          💾 Save Product &amp; Image SEO
+          💾 Save Product, Gallery &amp; SEO
         </button>
         <a href="products.php" class="btn-topbar" style="padding: 12px 20px;">Cancel</a>
       </div>
@@ -656,7 +848,7 @@ include __DIR__ . '/header.php';
     });
   }
 
-  // Handle Drag & Drop
+  // Handle Main Image Drag & Drop
   const dropZone = document.getElementById('dropZone');
   ['dragenter', 'dragover'].forEach(name => {
     dropZone.addEventListener(name, (e) => {
@@ -678,7 +870,7 @@ include __DIR__ . '/header.php';
     }
   });
 
-  // Handle Image File Upload via AJAX
+  // Handle Single Main Image Upload
   function handleFileUpload(file) {
     if (!file) return;
 
@@ -707,7 +899,6 @@ include __DIR__ . '/header.php';
         document.getElementById('image_filename').value = data.filename;
         document.getElementById('imagePreview').src = '../' + data.url;
 
-        // Auto-populate Alt and Title if empty
         const prodName = document.getElementById('name').value.trim();
         if (!document.getElementById('image_alt').value && prodName) {
           document.getElementById('image_alt').value = prodName;
@@ -724,6 +915,153 @@ include __DIR__ . '/header.php';
       statusText.style.color = '#EF4444';
       statusText.textContent = 'Network error: ' + err.message;
     });
+  }
+
+  // Handle Gallery Drag & Drop
+  const galleryDropZone = document.getElementById('galleryDropZone');
+  ['dragenter', 'dragover'].forEach(name => {
+    galleryDropZone.addEventListener(name, (e) => {
+      e.preventDefault();
+      galleryDropZone.style.borderColor = '#0284C7';
+      galleryDropZone.style.background = '#EFF6FF';
+    });
+  });
+  ['dragleave', 'drop'].forEach(name => {
+    galleryDropZone.addEventListener(name, (e) => {
+      e.preventDefault();
+      galleryDropZone.style.borderColor = '#CBD5E1';
+      galleryDropZone.style.background = '#FAFAFA';
+    });
+  });
+  galleryDropZone.addEventListener('drop', (e) => {
+    if (e.dataTransfer.files.length) {
+      handleGalleryUpload(e.dataTransfer.files);
+    }
+  });
+
+  // Handle Multi-File Gallery Upload
+  function handleGalleryUpload(files) {
+    if (!files || !files.length) return;
+
+    const statusText = document.getElementById('galleryUploadStatus');
+    statusText.style.color = '#0284C7';
+    statusText.textContent = 'Uploading ' + files.length + ' image(s) to gallery...';
+
+    const prodName = document.getElementById('name').value.trim();
+    let completed = 0;
+
+    Array.from(files).forEach((file, index) => {
+      const formData = new FormData();
+      formData.append('image_file', file);
+
+      fetch('api_upload_image.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'success') {
+          const altText = prodName ? (prodName + ' - Angle ' + (document.querySelectorAll('.gallery-item-card').length + 1)) : data.filename;
+          addGalleryCard(data.url, altText, altText);
+        }
+        completed++;
+        if (completed === files.length) {
+          statusText.style.color = '#10B981';
+          statusText.textContent = '✓ Successfully added ' + completed + ' image(s) to gallery!';
+          updateGalleryCount();
+        }
+      })
+      .catch(err => {
+        completed++;
+        statusText.style.color = '#EF4444';
+        statusText.textContent = 'Upload error: ' + err.message;
+      });
+    });
+  }
+
+  // Add a new gallery item card to the grid
+  function addGalleryCard(url, alt, title) {
+    const grid = document.getElementById('galleryGrid');
+    const card = document.createElement('div');
+    card.className = 'gallery-item-card';
+    const previewSrc = (url.indexOf('http') === 0) ? url : ('../' + url);
+
+    card.innerHTML = `
+      <div class="gallery-thumb">
+        <img src="${previewSrc}" alt="Gallery" onerror="this.src='../assets/categories/encapsulated-ring-ct.jpg'" />
+      </div>
+      <div class="gallery-meta">
+        <input type="text" name="gallery_images[]" value="${url}" placeholder="Image URL" oninput="updateGalleryThumb(this)" required />
+        <input type="text" name="gallery_alts[]" value="${alt || ''}" placeholder="Alt Text (SEO)" />
+        <input type="text" name="gallery_titles[]" value="${title || ''}" placeholder="Title (on hover)" />
+        <div class="gallery-actions">
+          <button type="button" class="btn-gallery-action btn-set-main" onclick="promoteToMainImage(this)" title="Swap with Primary Image">
+            ⭐ Make Primary
+          </button>
+          <button type="button" class="btn-gallery-action btn-remove-gallery" onclick="removeGalleryItem(this)" title="Delete image">
+            🗑️ Remove
+          </button>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+    updateGalleryCount();
+  }
+
+  function addEmptyGalleryItem() {
+    const prodName = document.getElementById('name').value.trim();
+    addGalleryCard('', prodName ? (prodName + ' Angle') : '', prodName ? (prodName + ' Angle') : '');
+  }
+
+  function removeGalleryItem(btn) {
+    const card = btn.closest('.gallery-item-card');
+    card.style.opacity = '0';
+    setTimeout(() => {
+      card.remove();
+      updateGalleryCount();
+    }, 150);
+  }
+
+  function updateGalleryThumb(input) {
+    const card = input.closest('.gallery-item-card');
+    const img = card.querySelector('.gallery-thumb img');
+    const val = input.value.trim();
+    img.src = (val.indexOf('http') === 0) ? val : ('../' + val);
+  }
+
+  function updateGalleryCount() {
+    const count = document.querySelectorAll('.gallery-item-card').length;
+    document.getElementById('galleryCount').textContent = count;
+  }
+
+  // Swap gallery image with main image
+  function promoteToMainImage(btn) {
+    const card = btn.closest('.gallery-item-card');
+    const galleryUrlInput = card.querySelector('input[name="gallery_images[]"]');
+    const galleryAltInput = card.querySelector('input[name="gallery_alts[]"]');
+    const galleryTitleInput = card.querySelector('input[name="gallery_titles[]"]');
+
+    const mainUrlInput = document.getElementById('image');
+    const mainAltInput = document.getElementById('image_alt');
+    const mainTitleInput = document.getElementById('image_title');
+    const mainPreview = document.getElementById('imagePreview');
+
+    // Swap values
+    const oldMainUrl = mainUrlInput.value;
+    const oldMainAlt = mainAltInput.value;
+    const oldMainTitle = mainTitleInput.value;
+
+    mainUrlInput.value = galleryUrlInput.value;
+    mainAltInput.value = galleryAltInput.value;
+    mainTitleInput.value = galleryTitleInput.value;
+    mainPreview.src = (galleryUrlInput.value.indexOf('http') === 0) ? galleryUrlInput.value : ('../' + galleryUrlInput.value);
+
+    galleryUrlInput.value = oldMainUrl;
+    galleryAltInput.value = oldMainAlt;
+    galleryTitleInput.value = oldMainTitle;
+    updateGalleryThumb(galleryUrlInput);
+
+    alert('✓ Swapped! The selected gallery image is now the Primary Product Image.');
   }
 </script>
 
