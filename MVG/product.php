@@ -97,12 +97,18 @@ $waUrl = "https://wa.me/" . WHATSAPP_NUMBER . "?text=" . rawurlencode($waMsg);
                 <img 
                   id="pdpMainImage" 
                   src="<?php echo htmlspecialchars($product['image']); ?>" 
-                  alt="<?php echo htmlspecialchars($product['name']); ?>" 
+                  alt="<?php echo htmlspecialchars($product['image_meta']['alt'] ?? $product['name']); ?>" 
+                  title="<?php echo htmlspecialchars($product['image_meta']['title'] ?? $product['name']); ?>"
                   width="500" 
                   height="500"
                   fetchpriority="high"
                   loading="eager"
                 />
+                <?php if (!empty($product['image_meta']['caption'])): ?>
+                  <div class="pdp-image-caption" style="font-size: 11.5px; color: #64748B; text-align: center; margin-top: 8px;">
+                    <?php echo htmlspecialchars($product['image_meta']['caption']); ?>
+                  </div>
+                <?php endif; ?>
               </div>
 
               <!-- Slider Right Arrow -->

@@ -81,6 +81,13 @@ include __DIR__ . '/header.php';
             <td><code><?php echo htmlspecialchars($p['sku']); ?></code></td>
             <td>
               <span class="badge badge-info"><?php echo htmlspecialchars($p['categoryName']); ?></span>
+              <?php if (!empty($p['sub_category'])): ?>
+                <div style="margin-top: 4px;">
+                  <span class="badge" style="background: #F1F5F9; color: #475569; font-size: 11px; border: 1px solid var(--border);">
+                    ↳ <?php echo htmlspecialchars($p['sub_category']); ?>
+                  </span>
+                </div>
+              <?php endif; ?>
             </td>
             <td>
               <strong>&#8377;<?php echo number_format($p['price'], 2); ?></strong>

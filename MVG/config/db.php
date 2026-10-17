@@ -84,6 +84,7 @@ class Database {
                     'price'        => $price,
                     'category'     => $primaryCat,
                     'categoryName' => $primaryCatName,
+                    'sub_category' => $p['sub_category'] ?? ($cats[1]['name'] ?? ''),
                     'image'        => $imgUrl,
                     'minQty'       => DEFAULT_MIN_QTY
                 ];
@@ -150,6 +151,14 @@ class Database {
                 }
 
                 $price = floatval($p['prices']['price'] ?? 28000) / 100;
+                $subCat = $p['sub_category'] ?? ($cats[1]['name'] ?? ($cats[1]['slug'] ?? ''));
+                $imgMeta = $p['image_meta'] ?? [
+                    'filename'    => basename($images[0] ?? 'product.jpg'),
+                    'title'       => $p['images'][0]['name'] ?? $p['name'],
+                    'alt'         => $p['images'][0]['alt'] ?? $p['name'],
+                    'caption'     => $p['images'][0]['caption'] ?? '',
+                    'description' => $p['images'][0]['description'] ?? ''
+                ];
 
                 return [
                     'id'                => $p['id'],
@@ -159,8 +168,10 @@ class Database {
                     'price'             => $price,
                     'category'          => $primaryCat,
                     'categoryName'      => $primaryCatName,
+                    'sub_category'      => $subCat,
                     'image'             => $images[0],
                     'images'            => $images,
+                    'image_meta'        => $imgMeta,
                     'short_description' => $p['short_description'] ?? '',
                     'description'       => $p['description'] ?? '',
                     'specs'             => $specs,
