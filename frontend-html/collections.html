@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Current Transformer Collections | Class 1.0 & 0.5 CTs — MVG Power Solutions</title>
-  <meta name="description" content="" />
-  <link rel="canonical" href="/collections.html" />
+  <title>Current Transformer Collections | Class 1.0 &amp; 0.5 CTs — MVG Power Solutions</title>
+  <meta name="description" content="MVG Power Solutions: Precision Current Transformers (Class 1.0 &amp; 0.5) for industrial switchboards, control panels, and energy metering." />
+  <link rel="canonical" href="collections.html" />
 
   <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,307 +14,12 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* Collections Page Design System */
-    .collections-hub-hero {
-      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-      color: #ffffff;
-      padding: 56px 0 64px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      position: relative;
-      overflow: hidden;
-    }
-    .collections-hub-hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -10%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(2, 132, 199, 0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .collection-hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 6px 14px;
-      background: rgba(2, 132, 199, 0.2);
-      border: 1px solid rgba(2, 132, 199, 0.4);
-      color: #38BDF8;
-      border-radius: 9999px;
-      font-size: 11.5px;
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    .collection-hero-h1 {
-      font-size: 38px;
-      font-weight: 900;
-      color: #FFFFFF;
-      letter-spacing: -0.6px;
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-    .collection-hero-lead {
-      font-size: 16px;
-      color: #94A3B8;
-      max-width: 820px;
-      line-height: 1.65;
-      margin: 0;
-    }
-
-    /* Category Filter Pills */
-    .subcat-pills-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 22px;
-    }
-    .subcat-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 7px 15px;
-      border-radius: 9999px;
-      background: rgba(255, 255, 255, 0.12);
-      color: #F1F5F9;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-    .subcat-pill:hover, .subcat-pill.active {
-      background: var(--mvg-brand);
-      border-color: var(--mvg-brand);
-      color: #ffffff;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
-    }
-
-    /* Collections Section Layout */
-    .collections-grid-section {
-      padding: 50px 0 80px 0;
-      background-color: #F8FAFC;
-    }
-    .collections-card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 26px;
-    }
-    @media (max-width: 1024px) {
-      .collections-card-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 640px) {
-      .collections-card-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-      .collection-hero-h1 {
-        font-size: 28px;
-      }
-    }
-
-    /* Category Hub Card */
-    .hub-category-card {
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      text-decoration: none;
-    }
-    .hub-category-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
-      border-color: var(--mvg-brand);
-    }
-    .hub-cat-media {
-      position: relative;
-      width: 100%;
-      height: 220px;
-      background-color: #F1F5F9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-bottom: 1px solid #E2E8F0;
-      padding: 24px;
-    }
-    .hub-cat-media img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      transition: transform 0.35s ease;
-    }
-    .hub-category-card:hover .hub-cat-media img {
-      transform: scale(1.08);
-    }
-    .hub-status-badge {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      font-size: 11px;
-      font-weight: 800;
-      color: #0F172A;
-      padding: 4px 10px;
-      border-radius: 9999px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-    }
-    .hub-cat-content {
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .hub-cat-title {
-      font-size: 17.5px;
-      font-weight: 800;
-      color: #0F172A;
-      margin-bottom: 8px;
-      line-height: 1.3;
-      transition: color 0.2s ease;
-    }
-    .hub-category-card:hover .hub-cat-title {
-      color: var(--mvg-brand);
-    }
-    .hub-cat-desc {
-      font-size: 13px;
-      color: #64748B;
-      line-height: 1.55;
-      margin-bottom: 16px;
-      flex: 1;
-    }
-    .hub-subcats-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 18px;
-    }
-    .hub-subcat-tag {
-      font-size: 11px;
-      font-weight: 700;
-      background: #F1F5F9;
-      color: #475569;
-      padding: 3px 8px;
-      border-radius: 6px;
-      border: 1px solid #E2E8F0;
-    }
-    .hub-cat-cta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 14px;
-      border-top: 1px solid #F1F5F9;
-      color: var(--mvg-brand);
-      font-size: 13.5px;
-      font-weight: 700;
-    }
-    .hub-cat-cta-icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--mvg-brand-lt);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-    }
-    .hub-category-card:hover .hub-cat-cta-icon {
-      background: var(--mvg-brand);
-      color: #ffffff;
-      transform: translateX(4px);
-    }
-
-    /* Section Dividers */
-    .section-divider-line {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 44px 0 24px 0;
-      padding-bottom: 12px;
-      border-bottom: 2px solid #E2E8F0;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .section-divider-line h3 {
-      font-size: 22px;
-      font-weight: 900;
-      color: #0F172A;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    /* Wholesale Benefit Banner */
-    .b2b-wholesale-strip {
-      background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-radius: 16px;
-      padding: 30px;
-      margin-top: 48px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
-    }
-    @media (max-width: 900px) {
-      .b2b-wholesale-strip {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 500px) {
-      .b2b-wholesale-strip {
-        grid-template-columns: 1fr;
-      }
-    }
-    .benefit-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-    .benefit-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: #F0F9FF;
-      color: var(--mvg-brand);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-    .benefit-title {
-      font-size: 14px;
-      font-weight: 800;
-      color: #0F172A;
-      margin-bottom: 4px;
-    }
-    .benefit-sub {
-      font-size: 12.5px;
-      color: #64748B;
-      line-height: 1.45;
-      margin: 0;
-    }
-  </style>
 </head>
 <body>
 
   <!-- Modular Site Header -->
   <header class="mvg-site-header">
+    <header class="mvg-site-header">
     
 <!-- Top Announcement Bar -->
 <div class="mvg-top-bar">
@@ -633,258 +337,1949 @@
     </div>
   </div>
 </aside>
-
   </header>
 
-  <!-- Hero Header (#0F172A Dark Slate Background) -->
-  <section class="collections-hub-hero">
+  <!-- Category Hero Header & Breadcrumbs (#0F172A Dark Slate Background) -->
+  <section class="category-hero-section">
     <div class="mvg-header-container">
       <nav class="breadcrumb-trail" aria-label="Breadcrumb">
         <a href="index.html">Home</a>
         <span class="sep">›</span>
-        <span class="current">Our Current Transformer Collection</span>
+        <span class="current">Current Transformer Collections</span>
       </nav>
-
-      <div style="margin-top: 14px;">
-        <span class="collection-hero-badge">⚡ CERTIFIED INDUSTRIAL PORTFOLIO</span>
-        <h1 class="collection-hero-h1">Our Current Transformer Collection</h1>
-        <p class="collection-hero-lead">
-          Explore certified Class 1.0 &amp; Class 0.5 Current Transformers across Encapsulated Square, Ring, Tape Wound, Resin Cast, and Split Core geometries. Manufactured factory-direct with 18% GST Input Tax Credit for panel builders, OEMs, and utility metering.
+      <div class="category-hero-content">
+        <h1 class="category-hero-title" id="categoryHeroTitle">Current Transformer Collections</h1>
+        <p class="category-hero-desc" id="categoryHeroDesc">
+          Explore certified Class 1.0 &amp; Class 0.5 Current Transformers across Encapsulated Square, Encapsulated Ring, Tape Wound, Resin Cast, and Split Core geometries designed for panel builders, switchgear manufacturers, and industrial metering.
         </p>
-
-        <!-- Quick Filter Pills -->
-        <div class="subcat-pills-wrap">
-          <a href="collections.html" class="subcat-pill " onclick="if(window.MVGHub){event.preventDefault(); window.MVGHub.setCategory('all'); document.querySelectorAll('.subcat-pill').forEach(p => p.classList.remove('active')); this.classList.add('active');}">
-            ⚡ All Collections (40 Products)
-          </a>
-          <a href="collections.html?category=encapsulated-square-ct" class="subcat-pill " onclick="if(window.MVGHub){event.preventDefault(); window.MVGHub.setCategory('encapsulated-square-ct'); document.querySelectorAll('.subcat-pill').forEach(p => p.classList.remove('active')); this.classList.add('active');}">
-            Square CT (16)
-          </a>
-          <a href="collections.html?category=encapsulated-ring-ct" class="subcat-pill " onclick="if(window.MVGHub){event.preventDefault(); window.MVGHub.setCategory('encapsulated-ring-ct'); document.querySelectorAll('.subcat-pill').forEach(p => p.classList.remove('active')); this.classList.add('active');}">
-            Ring CT (24)
-          </a>
-          <a href="category.html?slug=tape-wound-ring-ct" class="subcat-pill">
-            Tape Wound CT
-          </a>
-          <a href="category.html?slug=resin-cast-rectangular-ct" class="subcat-pill">
-            Resin Cast Rectangular CT
-          </a>
-          <a href="category.html?slug=resin-cast-ring-ct" class="subcat-pill">
-            Resin Cast Ring CT
-          </a>
-          <a href="category.html?slug=split-core-ct" class="subcat-pill">
-            Split Core CT
-          </a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Main Collections Grid Section -->
-  <main class="collections-grid-section">
-    <div class="mvg-header-container">
-
-      <!-- 1. CATEGORY GEOMETRIES & FAMILIES -->
-      <div class="section-divider-line">
-        <h3>
-          <span>📁 Transformer Geometries &amp; Series</span>
-        </h3>
-        <span style="font-size: 13.5px; color: var(--text-muted); font-weight: 600;">
-          Select a category or browse all models below
-        </span>
-      </div>
-
-      <!-- Category Cards Grid -->
-      <div class="collections-card-grid">
-        
+  <!-- Catalog Section & Filter Rail -->
+  <main class="catalog-section" id="catalogMain">
+    <div class="mvg-header-container catalog-layout">
+      
+      <!-- Left Filter Rail -->
+      <aside class="catalog-sidebar">
+        <div class="sidebar-sticky">
           
-          <a href="category.html?slug=" class="hub-category-card" title="Browse ">
-            
-            <div class="hub-cat-media">
-              <span class="hub-status-badge">Class 1.0 / 0.5</span>
-              <img 
-                src="" 
-                alt="" 
-                loading="lazy" 
-                onerror="this.src='assets/categories/encapsulated-ring-ct.jpg'"
-              />
+          <!-- Category Filter Group -->
+          <div class="filter-group">
+            <h4 class="filter-title">
+              <span>Collections</span>
+            </h4>
+            <ul class="category-menu" id="categoryFilterList">
+              <li>
+                <button type="button" class="cat-btn active" data-category="all">
+                  <span>All Current Transformers</span>
+                  <span class="cat-count" id="countAll">40</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="cat-btn" data-category="encapsulated-square-ct">
+                  <span>Encapsulated Square CT</span>
+                  <span class="cat-count">16</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="cat-btn" data-category="encapsulated-ring-ct">
+                  <span>Encapsulated Ring CT</span>
+                  <span class="cat-count">24</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="cat-btn" data-category="tape-wound-ring-ct">
+                  <span>Tape Wound Ring CT</span>
+                  <span class="cat-count">RFQ</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="cat-btn" data-category="resin-cast-rectangular-ct">
+                  <span>Resin Cast Rectangular CT</span>
+                  <span class="cat-count">RFQ</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="cat-btn" data-category="resin-cast-ring-ct">
+                  <span>Resin Cast Ring CT</span>
+                  <span class="cat-count">RFQ</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="cat-btn" data-category="split-core-ct">
+                  <span>Split Core CT</span>
+                  <span class="cat-count">RFQ</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Direct Factory Support Card -->
+          <div class="sidebar-help-card">
+            <span class="help-badge">DIRECT FACTORY SUPPORT</span>
+            <h5>Can’t find your ratio/size?</h5>
+            <p>MVG manufactures custom primary currents (30A–4000A), 1A secondary outputs, and bespoke busbar windows.</p>
+            <a href="https://wa.me/917836004040?text=Hello%20MVG%20Power%20Solutions,%20I%20need%20a%20custom%20CT%20inquiry." target="_blank" rel="noopener" class="btn btn-outline w-full" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: #ffffff;">
+              💬 Custom CT Request
+            </a>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- Right Catalog Main Area -->
+      <div class="catalog-main">
+
+        <!-- Catalog Toolbar -->
+        <div class="catalog-toolbar">
+          <div class="toolbar-info">
+            <h2 class="section-heading" id="sectionHeading">Current Transformer Collections</h2>
+            <span class="results-badge" id="resultsCount">Showing 40 products</span>
+          </div>
+
+          <div class="toolbar-controls">
+            <!-- 18% GST Input Tax Credit Switch -->
+            <div class="gst-toggle-control">
+              <span class="gst-label-text">18% GST:</span>
+              <label class="switch-control" title="Toggle 18% GST calculation">
+                <input type="checkbox" id="gstToggleCheck" />
+                <span class="slider"></span>
+              </label>
             </div>
 
-            <div class="hub-cat-content">
-              <h2 class="hub-cat-title"></h2>
-              <p class="hub-cat-desc">
-                
-              </p>
-
-              
-                <div class="hub-subcats-tags">
-                  
-                    <span class="hub-subcat-tag"></span>
-                  
-                  
-                    <span class="hub-subcat-tag">+ more</span>
-                  
-                </div>
-              
-
-              <div class="hub-cat-cta">
-                <span>View Products in Category</span>
-                <span class="hub-cat-cta-icon" aria-hidden="true">&rarr;</span>
-              </div>
+            <!-- Sort dropdown -->
+            <div class="sort-wrap">
+              <label for="sortSelect">Sort:</label>
+              <select id="sortSelect" class="custom-select">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+              </select>
             </div>
+          </div>
+        </div>
 
-          </a>
-        
+        <!-- Active Filter Tags Row -->
+        <div class="active-tags-row" id="activeTagsRow" style="display:none;">
+          <span class="tags-label">Filters:</span>
+          <div class="tags-container" id="tagsContainer"></div>
+          <button type="button" class="btn-clear-filters" id="clearAllFiltersBtn">Reset</button>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="product-cards-grid" id="productGrid" aria-live="polite">
+          
+    <article class="product-card" data-product-id="258">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=258'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/2500-A.jpg" alt="2500/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(258);}">Quick Specs</button>
       </div>
-
-      <!-- 2. FULL PRODUCT CATALOG SECTION -->
-      <div class="section-divider-line" id="collectionProductsSection">
-        <div>
-          <h3 id="sectionHeading">
-            <span>⚡ All Collection Products</span>
-          </h3>
-          <span class="results-badge" id="resultsCount" style="font-size: 13px; font-weight: 700; color: var(--mvg-brand); background: var(--mvg-brand-lt); padding: 3px 10px; border-radius: 6px; margin-top: 4px; display: inline-block;">
-            Showing 40 products
-          </span>
-        </div>
-        
-        <!-- Controls: 18% GST Switch & Sort -->
-        <div style="display: flex; align-items: center; gap: 16px;">
-          <div class="gst-toggle-control">
-            <span class="gst-label-text">18% GST:</span>
-            <label class="switch-control" title="Toggle 18% GST calculation">
-              <input type="checkbox" id="gstToggleCheck" />
-              <span class="slider"></span>
-            </label>
-          </div>
-
-          <div class="sort-wrap">
-            <label for="sortSelect" style="font-size: 13px; font-weight: 600; color: #475569;">Sort:</label>
-            <select id="sortSelect" class="custom-select" style="padding: 6px 12px; border-radius: 6px; border: 1px solid #CBD5E1; font-size: 13px;">
-              <option value="featured">Featured</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="name">Name: A to Z</option>
-            </select>
-          </div>
-        </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
       </div>
-
-      <!-- Active Filter Tags Row -->
-      <div class="active-tags-row" id="activeTagsRow" style="display:none; margin-bottom: 20px;">
-        <span class="tags-label">Filters:</span>
-        <div class="tags-container" id="tagsContainer"></div>
-        <button type="button" class="btn-clear-filters" id="clearAllFiltersBtn">Reset</button>
-      </div>
-
-      <!-- Dynamic Product Cards Grid -->
-      <div class="product-cards-grid" id="productGrid" aria-live="polite">
-        
-          <article class="product-card" data-product-id="">
-            <div class="product-thumb-wrap" onclick="window.location.href='product.html?id='" title="Click to view full specifications">
-              <img src="" alt="" loading="lazy" />
-              <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView();}">Quick Specs</button>
-            </div>
-            <div class="card-meta-row">
-              <span class="card-category-tag"></span>
-              <span class="card-sku-tag">Class 1.0</span>
-            </div>
-            <h3 class="card-title" title="">
-              <a href="product.html?id=" style="color: inherit; text-decoration: none;"></a>
-            </h3>
-            <div class="card-price-container">
-              <div class="price-main-row">
-                <span class="price-retail-label">Price:</span>
-                <span class="price-number">₹</span>
-              </div>
-              <div class="card-wholesale-tier-row">
-                <span class="tier-label-sm">Min. Qty:</span>
-                <span class="tier-price-sm"> Pcs</span>
-              </div>
-            </div>
-            <div class="card-actions">
-              <div class="qty-stepper">
-                <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(, -1);}" aria-label="Decrease quantity by 1">−</button>
-                <input 
-                  type="number" 
-                  class="qty-input" 
-                  id="qty-input-" 
-                  value="" 
-                  min="" 
-                  step="1"
-                  aria-label="Quantity for "
-                  oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(, this);}"
-                  onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(, this);}"
-                />
-                <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(, 1);}" aria-label="Increase quantity by 1">+</button>
-              </div>
-              <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard();}">
-                Add to Cart
-              </button>
-            </div>
-          </article>
-        
-      </div>
-
-      <!-- 3. B2B WHOLESALE ASSURANCE STRIP -->
-      <div class="b2b-wholesale-strip">
-        <div class="benefit-item">
-          <div class="benefit-icon">🏭</div>
-          <div>
-            <div class="benefit-title">Factory-Direct Supply</div>
-            <p class="benefit-sub">Direct manufacturer pricing with tiered wholesale rates for 10+, 50+, 100+ pcs.</p>
-          </div>
+      <h3 class="card-title" title="2500/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT">
+        <a href="product.html?id=258" style="color: inherit; text-decoration: none;">2500/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
         </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">⚡</div>
-          <div>
-            <div class="benefit-title">Same-Day Dispatch</div>
-            <p class="benefit-sub">Delhi NCR warehouse hub dispatching standard CT models within 24 hours.</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">🧾</div>
-          <div>
-            <div class="benefit-title">18% GST Tax Credit</div>
-            <p class="benefit-sub">Full B2B tax invoice provided with immediate Input Tax Credit (ITC) eligibility.</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">📐</div>
-          <div>
-            <div class="benefit-title">Custom CT Ratings</div>
-            <p class="benefit-sub">Custom primary currents (30A–4000A), 1A secondary, and special busbar windows.</p>
-          </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
         </div>
       </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(258, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-258" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 2500/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(258, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(258, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(258, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(258);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="255">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=255'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/2000-A.jpg" alt="2000/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(255);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="2000/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT">
+        <a href="product.html?id=255" style="color: inherit; text-decoration: none;">2000/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(255, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-255" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 2000/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(255, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(255, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(255, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(255);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="252">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=252'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1600-A.jpg" alt="1600/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(252);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="1600/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT">
+        <a href="product.html?id=252" style="color: inherit; text-decoration: none;">1600/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(252, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-252" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 1600/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(252, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(252, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(252, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(252);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="249">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=249'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1200-A.jpg" alt="1200/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(249);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="1200/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT">
+        <a href="product.html?id=249" style="color: inherit; text-decoration: none;">1200/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(249, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-249" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 1200/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(249, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(249, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(249, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(249);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="246">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=246'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1000-A-1.jpg" alt="1000/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(246);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="1000/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT">
+        <a href="product.html?id=246" style="color: inherit; text-decoration: none;">1000/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(246, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-246" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 1000/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(246, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(246, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(246, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(246);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="243">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=243'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/800-A-1.jpg" alt="800/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(243);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="800/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT">
+        <a href="product.html?id=243" style="color: inherit; text-decoration: none;">800/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(243, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-243" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 800/5A Ring Current Transformer 115mm CT | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(243, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(243, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(243, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(243);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="240">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=240'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1200-5a-85mm-ring-current-transformer-specifications-scaled.jpg" alt="1200/5A Ring Current Transformer 85mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(240);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="1200/5A Ring Current Transformer 85mm | Class 1.0 Metering CT">
+        <a href="product.html?id=240" style="color: inherit; text-decoration: none;">1200/5A Ring Current Transformer 85mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(240, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-240" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 1200/5A Ring Current Transformer 85mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(240, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(240, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(240, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(240);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="235">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=235'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/800-5a-85mm-ring-current-transformer-specifications-scaled.jpg" alt="800/5A Ring Current Transformer 85mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(235);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="800/5A Ring Current Transformer 85mm | Class 1.0 Metering CT">
+        <a href="product.html?id=235" style="color: inherit; text-decoration: none;">800/5A Ring Current Transformer 85mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(235, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-235" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 800/5A Ring Current Transformer 85mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(235, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(235, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(235, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(235);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="232">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=232'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1000-5a-85mm-ring-current-transformer-specifications-scaled.jpg" alt="1000/5A Ring Current Transformer 85mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(232);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="1000/5A Ring Current Transformer 85mm | Class 1.0 Metering CT">
+        <a href="product.html?id=232" style="color: inherit; text-decoration: none;">1000/5A Ring Current Transformer 85mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(232, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-232" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 1000/5A Ring Current Transformer 85mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(232, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(232, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(232, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(232);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="229">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=229'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/600-5a-85mm-ring-current-transformer-specifications-scaled.jpg" alt="600/5A Ring Current Transformer 85mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(229);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="600/5A Ring Current Transformer 85mm | Class 1.0 Metering CT">
+        <a href="product.html?id=229" style="color: inherit; text-decoration: none;">600/5A Ring Current Transformer 85mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(229, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-229" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 600/5A Ring Current Transformer 85mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(229, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(229, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(229, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(229);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="226">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=226'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1000-5a-65mm-ring-current-transformer-specifications.jpg" alt="1000/5A Ring Current Transformer 65mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(226);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="1000/5A Ring Current Transformer 65mm | Class 1.0 Metering CT">
+        <a href="product.html?id=226" style="color: inherit; text-decoration: none;">1000/5A Ring Current Transformer 65mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(226, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-226" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 1000/5A Ring Current Transformer 65mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(226, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(226, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(226, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(226);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="223">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=223'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/800-5a-65mm-ring-current-transformer-specifications.jpg" alt="800/5A Ring Current Transformer 65mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(223);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="800/5A Ring Current Transformer 65mm | Class 1.0 Metering CT">
+        <a href="product.html?id=223" style="color: inherit; text-decoration: none;">800/5A Ring Current Transformer 65mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(223, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-223" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 800/5A Ring Current Transformer 65mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(223, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(223, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(223, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(223);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="220">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=220'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/600-5a-65mm-ring-current-transformer-specifications.jpg" alt="600/5A Ring Current Transformer 65mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(220);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="600/5A Ring Current Transformer 65mm | Class 1.0 Metering CT">
+        <a href="product.html?id=220" style="color: inherit; text-decoration: none;">600/5A Ring Current Transformer 65mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(220, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-220" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 600/5A Ring Current Transformer 65mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(220, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(220, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(220, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(220);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="217">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=217'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/500-5a-65mm-ring-current-transformer-specifications.jpg" alt="500/5A Ring Current Transformer 65mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(217);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="500/5A Ring Current Transformer 65mm | Class 1.0 Metering CT">
+        <a href="product.html?id=217" style="color: inherit; text-decoration: none;">500/5A Ring Current Transformer 65mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(217, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-217" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 500/5A Ring Current Transformer 65mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(217, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(217, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(217, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(217);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="213">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=213'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/400-5a-65mm-ring-current-transformer-specifications.jpg" alt="400/5A Ring Current Transformer 65mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(213);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="400/5A Ring Current Transformer 65mm | Class 1.0 Metering CT">
+        <a href="product.html?id=213" style="color: inherit; text-decoration: none;">400/5A Ring Current Transformer 65mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(213, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-213" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 400/5A Ring Current Transformer 65mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(213, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(213, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(213, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(213);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="207">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=207'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/500-5a-45mm-ring-current-transformer-specifications.jpg" alt="500/5A Ring Current Transformer 45mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(207);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="500/5A Ring Current Transformer 45mm | Class 1.0 Metering CT">
+        <a href="product.html?id=207" style="color: inherit; text-decoration: none;">500/5A Ring Current Transformer 45mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(207, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-207" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 500/5A Ring Current Transformer 45mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(207, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(207, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(207, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(207);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="203">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=203'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/300-5a-45mm-encapsulated-ring-current-transformer.jpg" alt="300/5A Ring Current Transformer 45mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(203);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="300/5A Ring Current Transformer 45mm | Class 1.0 Metering CT">
+        <a href="product.html?id=203" style="color: inherit; text-decoration: none;">300/5A Ring Current Transformer 45mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(203, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-203" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 300/5A Ring Current Transformer 45mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(203, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(203, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(203, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(203);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="200">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=200'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/200-5a-45mm-ring-current-transformer-specifications.jpg" alt="200/5A Ring Current Transformer 45mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(200);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="200/5A Ring Current Transformer 45mm | Class 1.0 Metering CT">
+        <a href="product.html?id=200" style="color: inherit; text-decoration: none;">200/5A Ring Current Transformer 45mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(200, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-200" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 200/5A Ring Current Transformer 45mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(200, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(200, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(200, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(200);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="197">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=197'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/300-5a-35mm-ring-current-transformer-specifications.jpg" alt="300/5A Ring Current Transformer 35mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(197);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="300/5A Ring Current Transformer 35mm | Class 1.0 Metering CT">
+        <a href="product.html?id=197" style="color: inherit; text-decoration: none;">300/5A Ring Current Transformer 35mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(197, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-197" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 300/5A Ring Current Transformer 35mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(197, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(197, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(197, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(197);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="194">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=194'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/250-5a-35mm-ring-current-transformer-specifications.jpg" alt="250/5A Ring Current Transformer 35mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(194);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="250/5A Ring Current Transformer 35mm | Class 1.0 Metering CT">
+        <a href="product.html?id=194" style="color: inherit; text-decoration: none;">250/5A Ring Current Transformer 35mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(194, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-194" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 250/5A Ring Current Transformer 35mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(194, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(194, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(194, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(194);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="190">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=190'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/200-5a-35mm-ring-current-transformer-specifications-1.jpg" alt="200/5A Ring Current Transformer 35mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(190);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="200/5A Ring Current Transformer 35mm | Class 1.0 Metering CT">
+        <a href="product.html?id=190" style="color: inherit; text-decoration: none;">200/5A Ring Current Transformer 35mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(190, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-190" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 200/5A Ring Current Transformer 35mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(190, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(190, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(190, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(190);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="187">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=187'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/150-5a-35mm-ring-current-transformer-specifications.jpg" alt="150/5A Ring Current Transformer 35mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(187);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="150/5A Ring Current Transformer 35mm | Class 1.0 Metering CT">
+        <a href="product.html?id=187" style="color: inherit; text-decoration: none;">150/5A Ring Current Transformer 35mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(187, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-187" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 150/5A Ring Current Transformer 35mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(187, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(187, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(187, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(187);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="182">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=182'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/100-5a-35mm-ring-current-transformer-specifications-1.jpg" alt="100/5A Ring Current Transformer 35mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(182);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="100/5A Ring Current Transformer 35mm | Class 1.0 Metering CT">
+        <a href="product.html?id=182" style="color: inherit; text-decoration: none;">100/5A Ring Current Transformer 35mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(182, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-182" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 100/5A Ring Current Transformer 35mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(182, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(182, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(182, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(182);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="178">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=178'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/50-5a-35mm-ring-current-transformer-specifications.jpg" alt="50/5A Ring Current Transformer 35mm | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(178);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Ring CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="50/5A Ring Current Transformer 35mm | Class 1.0 Metering CT">
+        <a href="product.html?id=178" style="color: inherit; text-decoration: none;">50/5A Ring Current Transformer 35mm | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(178, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-178" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 50/5A Ring Current Transformer 35mm | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(178, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(178, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(178, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(178);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="173">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=173'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/1000-5a-62mm-current-transformer-class-1-metering-ct.jpg" alt="1000/5A 62mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(173);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="1000/5A 62mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=173" style="color: inherit; text-decoration: none;">1000/5A 62mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(173, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-173" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 1000/5A 62mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(173, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(173, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(173, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(173);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="170">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=170'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/800-5a-62mm-current-transformer-class-1-metering-ct.jpg" alt="800/5A 62mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(170);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="800/5A 62mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=170" style="color: inherit; text-decoration: none;">800/5A 62mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(170, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-170" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 800/5A 62mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(170, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(170, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(170, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(170);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="167">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=167'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/600-5a-62mm-current-transformer-class-1-metering-ct.jpg" alt="600/5A 62mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(167);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="600/5A 62mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=167" style="color: inherit; text-decoration: none;">600/5A 62mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(167, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-167" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 600/5A 62mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(167, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(167, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(167, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(167);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="163">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=163'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/500-5a-62mm-current-transformer-class-1-metering-ct.jpg" alt="500/5A 62mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(163);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="500/5A 62mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=163" style="color: inherit; text-decoration: none;">500/5A 62mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(163, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-163" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 500/5A 62mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(163, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(163, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(163, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(163);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="160">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=160'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/600-5a-42mm-current-transformer-class-1-metering-ct.jpg" alt="600/5A 42mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(160);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="600/5A 42mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=160" style="color: inherit; text-decoration: none;">600/5A 42mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(160, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-160" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 600/5A 42mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(160, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(160, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(160, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(160);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="156">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=156'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/500-5a-42mm-current-transformer-class-1-metering-ct.jpg" alt="500/5A 42mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(156);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="500/5A 42mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=156" style="color: inherit; text-decoration: none;">500/5A 42mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(156, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-156" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 500/5A 42mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(156, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(156, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(156, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(156);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="151">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=151'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/400-5a-42mm-current-transformer-class-1-metering-ct.jpg" alt="400/5A 42mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(151);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="400/5A 42mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=151" style="color: inherit; text-decoration: none;">400/5A 42mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(151, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-151" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 400/5A 42mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(151, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(151, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(151, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(151);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="148">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=148'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/300-5a-42mm-current-transformer-class-1-metering-ct.jpg" alt="300/5A 42mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(148);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="300/5A 42mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=148" style="color: inherit; text-decoration: none;">300/5A 42mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(148, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-148" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 300/5A 42mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(148, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(148, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(148, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(148);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="145">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=145'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/250-5a-42mm-current-transformer-class-1-metering-ct.jpg" alt="250/5A 42mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(145);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="250/5A 42mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=145" style="color: inherit; text-decoration: none;">250/5A 42mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(145, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-145" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 250/5A 42mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(145, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(145, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(145, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(145);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="142">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=142'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/300-5a-32mm-current-transformer-class-1-metering-ct.jpg" alt="300/5A 32mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(142);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="300/5A 32mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=142" style="color: inherit; text-decoration: none;">300/5A 32mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(142, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-142" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 300/5A 32mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(142, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(142, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(142, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(142);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="139">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=139'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/250-5a-32mm-current-transformer-class-1-metering-ct.jpg" alt="250/5A 32mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(139);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="250/5A 32mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=139" style="color: inherit; text-decoration: none;">250/5A 32mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(139, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-139" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 250/5A 32mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(139, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(139, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(139, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(139);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="136">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=136'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/200-5a-32mm-current-transformer-class-1-metering-ct.jpg" alt="200/5A 32mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(136);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="200/5A 32mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=136" style="color: inherit; text-decoration: none;">200/5A 32mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(136, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-136" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 200/5A 32mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(136, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(136, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(136, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(136);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="131">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=131'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/50-5a-32mm-current-transformer-class-1-metering-ct.jpg" alt="50/5A 32mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(131);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="50/5A 32mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=131" style="color: inherit; text-decoration: none;">50/5A 32mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(131, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-131" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 50/5A 32mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(131, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(131, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(131, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(131);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="128">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=128'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/200-5a-22mm-current-transformer-class-1-metering-ct.jpg" alt="200/5A 22mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(128);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="200/5A 22mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=128" style="color: inherit; text-decoration: none;">200/5A 22mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(128, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-128" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 200/5A 22mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(128, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(128, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(128, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(128);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="125">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=125'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/100-5a-22mm-current-transformer-class-1-metering-ct.jpg" alt="100/5A 22mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(125);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="100/5A 22mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=125" style="color: inherit; text-decoration: none;">100/5A 22mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(125, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-125" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 100/5A 22mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(125, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(125, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(125, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(125);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+    <article class="product-card" data-product-id="38">
+      <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=38'" title="Click to view full specifications">
+        <img src="https://www.mvgpowersolutions.com/wp-content/uploads/2026/08/60-5a-22mm-current-transformer-class-1-metering-ct.jpg" alt="60/5A 22mm Current Transformer | Class 1.0 Metering CT" loading="lazy" />
+        <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); if(window.MVGHub){window.MVGHub.openQuickView(38);}">Quick Specs</button>
+      </div>
+      <div class="card-meta-row">
+        <span class="card-category-tag">Encapsulated Square CT</span>
+        <span class="card-sku-tag">Class 1.0</span>
+      </div>
+      <h3 class="card-title" title="60/5A 22mm Current Transformer | Class 1.0 Metering CT">
+        <a href="product.html?id=38" style="color: inherit; text-decoration: none;">60/5A 22mm Current Transformer | Class 1.0 Metering CT</a>
+      </h3>
+      <div class="card-price-container">
+        <div class="price-main-row">
+          <span class="price-retail-label">Price:</span>
+          <span class="price-number">₹280</span>
+        </div>
+        <div class="card-wholesale-tier-row">
+          <span class="tier-label-sm">Min. Qty:</span>
+          <span class="tier-price-sm">10 Pcs</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(38, -1);}" aria-label="Decrease quantity by 1">−</button>
+          <input 
+            type="number" 
+            class="qty-input" 
+            id="qty-input-38" 
+            value="10" 
+            min="10" 
+            step="1"
+            aria-label="Quantity for 60/5A 22mm Current Transformer | Class 1.0 Metering CT"
+            oninput="if(window.MVGHub){window.MVGHub.handleCardQtyInput(38, this);}"
+            onblur="if(window.MVGHub){window.MVGHub.handleCardQtyBlur(38, this);}"
+            onkeydown="if(event.key==='Enter'){this.blur();}"
+          />
+          <button type="button" class="stepper-btn" onclick="if(window.MVGHub){window.MVGHub.updateCardQty(38, 1);}" aria-label="Increase quantity by 1">+</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="if(window.MVGHub){window.MVGHub.addToCartFromCard(38);}">
+          Add to Cart
+        </button>
+      </div>
+    </article>
+  
+        </div>
 
-      <!-- 4. DIRECT ENGINEERING SUPPORT BANNER -->
-      <div style="background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); border-radius: 16px; padding: 32px 36px; margin-top: 36px; color: #ffffff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-        <div style="max-width: 650px;">
-          <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 6px; color: #ffffff;">Need a custom current transformer specification?</h3>
-          <p style="font-size: 14px; margin: 0; color: #E0F2FE; line-height: 1.5;">
-            Our electrical engineering team designs custom CT solutions, dual ratios, non-standard burden ratings (2.5VA to 15VA), and special mounting requirements for OEMs.
-          </p>
-        </div>
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="https://wa.me/?text=Hello%20MVG%20Power%20Solutions,%20I%20have%20an%20inquiry%20regarding%20Current%20Transformer%20Collection." target="_blank" rel="noopener" class="btn" style="background: #FFFFFF; color: #0284C7; font-weight: 800; border: none; padding: 12px 22px; border-radius: 8px; text-decoration: none;">
-            💬 WhatsApp Us
-          </a>
-          <a href="tel:" class="btn" style="background: rgba(255,255,255,0.15); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.4); font-weight: 700; padding: 12px 20px; border-radius: 8px; text-decoration: none;">
-            📞 Call Technical Desk
-          </a>
-        </div>
       </div>
 
     </div>
   </main>
 
   <!-- Modular Modals & Slide-Over Drawer -->
-  
-<div class="modal-backdrop" id="productModal" hidden>
+  <div class="modal-backdrop" id="productModal" hidden>
   <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
     <div class="modal-body" id="modalProductContent">
@@ -955,10 +2350,9 @@
 
 </aside>
 
-
   <!-- Modular Site Footer -->
-  
-<footer class="mvg-site-footer" role="contentinfo">
+  <footer class="mvg-site-footer" role="contentinfo">
+    <footer class="mvg-site-footer" role="contentinfo">
   
   <!-- 1. Value Assurances Banner -->
   <div class="mvg-footer-features">
@@ -1127,12 +2521,10 @@
       </div>
     </div>
   </div>
+  </footer>
 
-</footer>
-
-<!-- Toast Stack -->
-<div class="toast-stack" id="toastStack" aria-live="assertive"></div>
-
+  <!-- Toast Stack -->
+  <div class="toast-stack" id="toastStack" aria-live="assertive"></div>
 
   <!-- Scripts -->
   <script src="js/header.js"></script>
