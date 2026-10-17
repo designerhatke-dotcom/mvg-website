@@ -205,4 +205,23 @@ class Database {
         }
         return $related;
     }
+
+    /**
+     * Get categories list from database or categories.json
+     */
+    public static function getCategories() {
+        $pdo = self::getConnection();
+        if ($pdo) {
+            try {
+                $stmt = $pdo->query("SELECT * FROM categories ORDER BY parent_id ASC, name ASC");
+                $rows = $stmt->fetchAll();
+                if ($rows) return $rows;
+            } catch (Exception $e) {}
+        }
+        $jsonPath = __DIR__ . '/../data/categories.json';
+        if (file_exists($jsonPath)) {
+            return json_decode(file_get_contents($jsonPath), true) ?: [];
+        }
+        return [];
+    }
 }

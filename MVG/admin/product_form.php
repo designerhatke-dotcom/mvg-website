@@ -25,6 +25,31 @@ if ($editId) {
     }
 }
 
+// Load categories and sub-categories
+$allCategories = Database::getCategories();
+$parentCategories = [];
+$subCategoriesMap = [];
+$parentById = [];
+
+foreach ($allCategories as $c) {
+    $pId = intval($c['parent'] ?? ($c['parent_id'] ?? 0));
+    if ($pId === 0) {
+        $parentCategories[] = $c;
+        $parentById[$c['id']] = $c;
+        if (!isset($subCategoriesMap[$c['slug']])) {
+            $subCategoriesMap[$c['slug']] = [];
+        }
+    }
+}
+
+foreach ($allCategories as $c) {
+    $pId = intval($c['parent'] ?? ($c['parent_id'] ?? 0));
+    if ($pId > 0 && isset($parentById[$pId])) {
+        $pSlug = $parentById[$pId]['slug'];
+        $subCategoriesMap[$pSlug][] = $c['name'];
+    }
+}
+
 $adminTitle = $editId ? 'Edit Product #' . $editId : 'Add New Product';
 $adminHeading = $editId ? 'Edit Industrial Product' : 'Add New Current Transformer';
 
@@ -490,29 +515,25 @@ include __DIR__ . '/header.php';
 
         <!-- Category & Sub Category Selection -->
         <div class="form-group">
-          <label for="category">Primary Category *</label>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <label for="category" style="margin: 0;">Primary Category *</label>
+            <a href="categories.php" target="_blank" style="font-size: 11.5px; color: var(--primary); text-decoration: none; font-weight: 600;">+ Manage Categories ↗</a>
+          </div>
           <select id="category" name="category" class="form-control" onchange="updateSubCategorySuggestions(this.value)">
-            <option value="encapsulated-ring-ct" <?php echo (($product['category'] ?? '') === 'encapsulated-ring-ct') ? 'selected' : ''; ?>>
-              Encapsulated Ring CT
-            </option>
-            <option value="encapsulated-square-ct" <?php echo (($product['category'] ?? '') === 'encapsulated-square-ct') ? 'selected' : ''; ?>>
-              Encapsulated Square CT
-            </option>
-            <option value="tape-wound-ct" <?php echo (($product['category'] ?? '') === 'tape-wound-ct') ? 'selected' : ''; ?>>
-              Tape Wound CT
-            </option>
-            <option value="resin-cast-ct" <?php echo (($product['category'] ?? '') === 'resin-cast-ct') ? 'selected' : ''; ?>>
-              Resin Cast CT
-            </option>
-            <option value="custom-ratio-ct" <?php echo (($product['category'] ?? '') === 'custom-ratio-ct') ? 'selected' : ''; ?>>
-              Custom Ratio CT
-            </option>
+            <?php foreach ($parentCategories as $pCat): ?>
+              <option value="<?php echo htmlspecialchars($pCat['slug']); ?>" <?php echo (($product['category'] ?? '') === $pCat['slug']) ? 'selected' : ''; ?>>
+                <?php echo htmlspecialchars($pCat['name']); ?>
+              </option>
+            <?php endforeach; ?>
           </select>
           <span class="field-hint">Primary parent collection</span>
         </div>
 
         <div class="form-group">
-          <label for="sub_category">Sub Category</label>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <label for="sub_category" style="margin: 0;">Sub Category</label>
+            <a href="categories.php" target="_blank" style="font-size: 11.5px; color: var(--primary); text-decoration: none; font-weight: 600;">+ Add Sub-Category ↗</a>
+          </div>
           <input 
             type="text" 
             id="sub_category" 
@@ -520,21 +541,12 @@ include __DIR__ . '/header.php';
             list="subCategoryList" 
             class="form-control" 
             value="<?php echo htmlspecialchars($product['sub_category'] ?? ''); ?>" 
-            placeholder="e.g. 115mm Window / Class 1.0"
+            placeholder="e.g. 115mm Window or Class 1.0"
           />
           <datalist id="subCategoryList">
-            <option value="30mm Window">
-            <option value="45mm Window">
-            <option value="60mm Window">
-            <option value="85mm Window">
-            <option value="115mm Window">
-            <option value="Class 1.0">
-            <option value="Class 0.5">
-            <option value="Class 0.2S">
-            <option value="5A Secondary">
-            <option value="1A Secondary">
+            <!-- Dynamically populated via JavaScript based on chosen Primary Category -->
           </datalist>
-          <span class="field-hint">Choose from list or type custom sub-category</span>
+          <span class="field-hint">Choose suggested sub-category or type a custom one</span>
         </div>
 
         <div class="form-group">
@@ -956,19 +968,17 @@ include __DIR__ . '/header.php';
     }
   }
 
+  // Sub Category Dynamic Map from PHP Database/JSON
+  const subCategoriesMap = <?php echo json_encode($subCategoriesMap, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP); ?>;
+
   // Sub Category Dynamic Suggestions
   function updateSubCategorySuggestions(cat) {
     const list = document.getElementById('subCategoryList');
+    if (!list) return;
     list.innerHTML = '';
-    let suggestions = [];
-    if (cat === 'encapsulated-ring-ct') {
-      suggestions = ['30mm Window', '45mm Window', '60mm Window', '85mm Window', '115mm Window', 'Class 1.0', 'Class 0.5'];
-    } else if (cat === 'encapsulated-square-ct') {
-      suggestions = ['30x10mm Window', '40x10mm Window', '50x12mm Window', '60x15mm Window', '80x20mm Window', 'Class 1.0', 'Class 0.5'];
-    } else if (cat === 'tape-wound-ct') {
-      suggestions = ['Tape Wound Ring', '5A Secondary', '1A Secondary', 'Class 1.0'];
-    } else {
-      suggestions = ['Class 1.0', 'Class 0.5', 'Class 0.2S', 'Custom Primary Ratio'];
+    let suggestions = subCategoriesMap[cat] || [];
+    if (!suggestions || suggestions.length === 0) {
+      suggestions = ['Class 1.0', 'Class 0.5', 'Class 0.2S', '5A Secondary', '1A Secondary'];
     }
 
     suggestions.forEach(s => {
@@ -1241,6 +1251,10 @@ include __DIR__ . '/header.php';
   // Run initial preview check on page load
   window.addEventListener('load', function() {
     updateSerpPreview();
+    const catEl = document.getElementById('category');
+    if (catEl) {
+      updateSubCategorySuggestions(catEl.value);
+    }
   });
 </script>
 

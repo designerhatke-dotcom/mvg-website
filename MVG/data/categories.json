@@ -1,46 +1,98 @@
 [
   {
-    "id": 58,
+    "id": 1,
     "name": "Encapsulated Ring CT",
     "slug": "encapsulated-ring-ct",
-    "description": "",
     "parent": 0,
-    "count": 24,
-    "image": null,
-    "review_count": 0,
-    "permalink": "https://www.mvgpowersolutions.com/product-category/encapsulated-ring-ct/"
+    "description": "High-precision Class 1.0 & 0.5 round current transformers with fire-retardant casing for electrical panels.",
+    "image": "assets/categories/encapsulated-ring-ct.jpg"
   },
   {
-    "id": 43,
+    "id": 11,
+    "name": "30mm Window CT",
+    "slug": "30mm-window-ct",
+    "parent": 1,
+    "description": "Compact 30mm aperture ring CT for feeder monitoring up to 400A.",
+    "image": "assets/categories/encapsulated-ring-ct.jpg"
+  },
+  {
+    "id": 12,
+    "name": "45mm Window CT",
+    "slug": "45mm-window-ct",
+    "parent": 1,
+    "description": "Medium 45mm aperture ring CT for industrial LT distribution.",
+    "image": "assets/categories/encapsulated-ring-ct.jpg"
+  },
+  {
+    "id": 13,
+    "name": "60mm Window CT",
+    "slug": "60mm-window-ct",
+    "parent": 1,
+    "description": "60mm aperture ring CT for commercial sub-feeders up to 1000A.",
+    "image": "assets/categories/encapsulated-ring-ct.jpg"
+  },
+  {
+    "id": 14,
+    "name": "85mm Window CT",
+    "slug": "85mm-window-ct",
+    "parent": 1,
+    "description": "85mm aperture ring CT for heavy cable bundles up to 1600A.",
+    "image": "assets/categories/encapsulated-ring-ct.jpg"
+  },
+  {
+    "id": 15,
+    "name": "115mm Window CT",
+    "slug": "115mm-window-ct",
+    "parent": 1,
+    "description": "Large 115mm aperture current transformers for main incomers up to 3200A.",
+    "image": "assets/categories/encapsulated-ring-ct.jpg"
+  },
+  {
+    "id": 2,
     "name": "Encapsulated Square CT",
     "slug": "encapsulated-square-ct",
-    "description": "",
     "parent": 0,
-    "count": 16,
-    "image": null,
-    "review_count": 0,
-    "permalink": "https://www.mvgpowersolutions.com/product-category/encapsulated-square-ct/"
+    "description": "Square window current transformers optimized for standard busbars with transparent terminal shrouds.",
+    "image": "assets/categories/encapsulated-square-ct.jpg"
   },
   {
-    "id": 60,
-    "name": "Ring CT",
-    "slug": "ring-ct",
-    "description": "",
-    "parent": 0,
-    "count": 24,
-    "image": null,
-    "review_count": 0,
-    "permalink": "https://www.mvgpowersolutions.com/product-category/ring-ct/"
+    "id": 21,
+    "name": "30x10mm Window CT",
+    "slug": "30x10mm-window-ct",
+    "parent": 2,
+    "description": "Square CT for single 30x10mm flat copper/aluminium busbars.",
+    "image": "assets/categories/encapsulated-square-ct.jpg"
   },
   {
-    "id": 59,
-    "name": "Square CT",
-    "slug": "square-ct",
-    "description": "",
+    "id": 22,
+    "name": "50x12mm Window CT",
+    "slug": "50x12mm-window-ct",
+    "parent": 2,
+    "description": "Square CT for 50x10mm and 50x12mm busbars.",
+    "image": "assets/categories/encapsulated-square-ct.jpg"
+  },
+  {
+    "id": 23,
+    "name": "80x20mm Window CT",
+    "slug": "80x20mm-window-ct",
+    "parent": 2,
+    "description": "Square window CT for large industrial power busbars up to 2500A.",
+    "image": "assets/categories/encapsulated-square-ct.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Tape Wound CT",
+    "slug": "tape-wound-ct",
     "parent": 0,
-    "count": 16,
-    "image": null,
-    "review_count": 0,
-    "permalink": "https://www.mvgpowersolutions.com/product-category/square-ct/"
+    "description": "High permeability tape wound CTs for standard industrial metering and control circuits.",
+    "image": "assets/categories/tape-wound-ring-ct.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Custom Ratio CT",
+    "slug": "custom-ratio-ct",
+    "parent": 0,
+    "description": "Custom engineered CTs with bespoke primary ratings, dual ratios, and special burden VA.",
+    "image": "assets/categories/split-core-ct.jpg"
   }
 ]
