@@ -1,5 +1,13 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/matescre/public_html/www.mvgpowersolutions.com/
-    - /bin/cp -R MVG/* $DEPLOYPATH
+    - export SUBFOLDER=/home/matescre/public_html/www.mvgpowersolutions.com/mvg/
+    - export ROOTFOLDER=/home/matescre/public_html/www.mvgpowersolutions.com/
+    - /bin/mkdir -p $SUBFOLDER
+    - /bin/cp -R MVG/* $SUBFOLDER
+    - /bin/rm -f $ROOTFOLDER/index.html
+    - /bin/rm -f $ROOTFOLDER/collections.html
+    - /bin/rm -f $ROOTFOLDER/collections.php
+    - /bin/rm -f $ROOTFOLDER/product.php
+    - /bin/rm -f $ROOTFOLDER/connect_google_reviews.php
+    - /bin/cp restore_wp/index.php $ROOTFOLDER/index.php
