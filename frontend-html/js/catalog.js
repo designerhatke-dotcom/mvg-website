@@ -187,7 +187,7 @@
         <article class="product-card" data-product-id="${p.id}">
           
           <!-- Thumbnail with Quick Specs overlay -->
-          <div class="product-thumb-wrap" onclick="window.location.href='product.php?id=${p.id}'" title="Click to view full specifications">
+          <div class="product-thumb-wrap" onclick="window.location.href='product.html?id=${p.id}'" title="Click to view full specifications">
             <img src="${p.image}" alt="${p.name}" loading="lazy" />
             <button type="button" class="quick-view-overlay-btn" onclick="event.stopPropagation(); window.MVGHub.openQuickView(${p.id})">Quick Specs</button>
           </div>
@@ -200,7 +200,7 @@
 
           <!-- Product Title -->
           <h3 class="card-title" title="${p.name}">
-            <a href="product.php?id=${p.id}" style="color: inherit; text-decoration: none;">${p.name}</a>
+            <a href="product.html?id=${p.id}" style="color: inherit; text-decoration: none;">${p.name}</a>
           </h3>
 
           <!-- Pricing Container -->
@@ -609,7 +609,7 @@
             <button type="button" class="btn btn-primary" style="flex: 1.5 1 180px;" onclick="window.MVGHub.addToCartFromCard(${p.id}); window.MVGHub.closeQuickView();">
               Add Minimum (${p.minQty || 10} Pcs) to Cart
             </button>
-            <a href="product.php?id=${p.id}" class="btn btn-outline" style="border-color: #052C6E; color: #052C6E; padding: 10px 14px;">
+            <a href="product.html?id=${p.id}" class="btn btn-outline" style="border-color: #052C6E; color: #052C6E; padding: 10px 14px;">
               Full Details &rarr;
             </a>
             <a href="https://wa.me/917836004040?text=${encodeURIComponent('Hello MVG Power Solutions, I need a quotation for ' + p.name + ' (SKU: ' + p.sku + ')')}" target="_blank" rel="noopener" class="btn btn-whatsapp" style="padding: 10px 14px;">

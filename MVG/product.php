@@ -11,17 +11,64 @@ require_once __DIR__ . '/includes/google_reviews.php';
 $googleReviewsData = GoogleReviewsService::getReviewsData();
 $googleReviews = $googleReviewsData['reviews'] ?? [];
 
-// Resolve Product ID or fallback to first top-selling product (ID 258)
-$productId = isset($_GET['id']) ? intval($_GET['id']) : (isset($_GET['slug']) ? trim($_GET['slug']) : 258);
-$product = Database::getProductById($productId);
+// Resolve Product ID or Slug cleanly
+$rawId = trim($_GET['id'] ?? '');
+$rawSlug = trim($_GET['slug'] ?? '');
+$lookupKey = !empty($rawId) ? $rawId : (!empty($rawSlug) ? $rawSlug : 136);
 
-// If invalid, fallback to top product
+if (ctype_digit((string)$lookupKey)) {
+    $product = Database::getProductById(intval($lookupKey));
+} else {
+    $product = Database::getProductById($lookupKey);
+}
+
+// Fallback to Product 136 or 258 if not found
 if (!$product) {
-    $product = Database::getProductById(258);
+    $product = Database::getProductById(136) ?: Database::getProductById(258);
+}
+
+// Safe fallback product array so $product is never null
+if (!$product) {
+    $product = [
+        'id'                => 136,
+        'name'              => '200/5A 32mm Current Transformer | Class 1.0 Metering CT',
+        'slug'              => '200-5a-32mm-current-transformer',
+        'permalink'         => 'product.php?id=136',
+        'sku'               => 'MVG-CT-136',
+        'price'             => 280,
+        'category'          => 'encapsulated-square-ct',
+        'categoryName'      => 'Encapsulated Square CT',
+        'sub_category'      => 'Square CT',
+        'image'             => 'https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/200-5a-32mm-current-transformer-class-1-metering-ct.jpg',
+        'images'            => [
+            'https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/200-5a-32mm-current-transformer-class-1-metering-ct.jpg',
+            'https://www.mvgpowersolutions.com/wp-content/uploads/2026/09/200-5a-32mm-ct-32x10mm-busbar-window.jpg'
+        ],
+        'short_description' => 'Compact 200/5A Class 1.0 Current Transformer with 32mm aperture.',
+        'description'       => 'High-precision 200/5A Class 1.0 Current Transformer designed for industrial energy metering.',
+        'specs'             => [
+            'Accuracy Class'    => 'Class 1.0 (IS 2705)',
+            'Primary Current'   => '200 A',
+            'Secondary Current' => '5 A',
+            'Rated Burden'      => '5 VA',
+            'Inner Diameter'    => '32 mm',
+            'Standard'          => 'IS 2705 / IEC 61869-2'
+        ],
+        'minQty'            => 10,
+        'meta_title'        => '200/5A 32mm Current Transformer | Class 1.0 Metering CT',
+        'meta_description'  => 'Buy 200/5A 32mm Current Transformer factory-direct from MVG Power Solutions.',
+        'image_meta'        => [
+            'filename'    => '200-5a-32mm-current-transformer.jpg',
+            'title'       => '200/5A 32mm Current Transformer',
+            'alt'         => '200/5A 32mm Current Transformer',
+            'caption'     => '200/5A 32mm Class 1.0 Metering CT',
+            'description' => '200/5A 32mm Current Transformer'
+        ]
+    ];
 }
 
 // Related products in the same collection
-$relatedProducts = Database::getRelatedProducts($product['id'], $product['category'], 4);
+$relatedProducts = Database::getRelatedProducts($product['id'], $product['category'] ?? null, 4);
 
 $pageTitle = htmlspecialchars($product['meta_title'] ?? ($product['name'] . " | " . SITE_NAME));
 $metaDesc = htmlspecialchars($product['meta_description'] ?? ("Buy " . $product['name'] . " factory-direct from " . SITE_NAME . ". Class 1.0 metering, IS 2705 certified with 18% GST Input Tax Credit."));
